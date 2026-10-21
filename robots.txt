@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://madisonshalom72.github.io/startbusiness24-site/sitemap.xml
