@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Business Ideas — StartBusiness24</title>
+<meta name="description" content="Eighteen smart business ideas across six trades — cleaning, moving, handyman, landscaping, pressure washing, junk removal — with narrated video clips, startup cost estimates, first steps, and what you'd file.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0a08;--panel:#1e1813;--line:#33291f;--cream:#f4ecdc;--cream-dim:#cbbfa9;--mut:#9a8b74;
+--orange:#ff5a1f;--orange2:#ff8a3d;--amber:#e3bd85;--ink:#161210}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(12,10,8,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream);margin-right:auto}
+.bmark{width:34px;height:34px;background:var(--orange);color:var(--ink);display:flex;align-items:center;justify-content:center;
+font-weight:900;font-size:19px;font-family:'Oswald',sans-serif;box-shadow:0 0 20px rgba(255,90,31,.4)}
+.bname{font-size:19px;font-weight:700;letter-spacing:.05em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+.bname span{color:var(--orange)}
+nav.main{display:flex;gap:16px;flex-wrap:wrap}
+nav.main a{color:var(--cream-dim);text-decoration:none;font-size:14px;font-weight:600}
+nav.main a:hover,nav.main a[aria-current]{color:var(--orange2)}
+.btn{display:inline-block;background:var(--orange);color:var(--ink);border:2px solid var(--ink);cursor:pointer;
+font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14.5px;
+padding:12px 20px;text-decoration:none;box-shadow:3px 3px 0 #000}
+.btn.small{font-size:13px;padding:9px 14px;box-shadow:2px 2px 0 #000}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--line);box-shadow:none}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+main{display:block}
+section.block{padding:52px 0 30px}
+.kick{color:var(--orange2);font-weight:800;letter-spacing:.2em;font-size:11.5px;text-transform:uppercase}
+h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(30px,5.6vw,46px);line-height:1.05;margin:10px 0 12px}
+h1 em{font-style:normal;color:var(--orange)}
+h2{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(22px,4vw,30px);line-height:1.1}
+h3.cond{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.lede{color:var(--cream-dim);font-size:16.5px;max-width:700px}
+.tool{border:1px solid var(--line);background:var(--panel);padding:22px;margin-top:26px}
+.fld{display:block;margin-bottom:14px}
+.fld span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fld select{width:100%;background:#100d0a;border:1px solid var(--line);
+color:var(--cream);font-family:'Inter',sans-serif;font-size:16px;padding:12px 13px;outline:none}
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.tool-grid{grid-template-columns:1fr}}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 4px}
+.tool-status{color:var(--amber);font-size:14px;min-height:20px;margin-top:10px}
+.honest{margin-top:16px;color:var(--mut);font-size:13px;border-top:1px dashed var(--line);padding-top:12px;max-width:700px}
+.idea-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:22px}
+.idea-card{border:1px solid var(--line);border-top:4px solid var(--orange);background:var(--panel);padding:18px}
+.idea-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{font-family:'Oswald',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+padding:3px 9px;border:1px solid var(--line);color:var(--cream-dim)}
+.chip.trade{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+.chip.lic{color:var(--amber);border-color:var(--amber)}
+.idea-card h4{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:19px;line-height:1.2;margin-bottom:6px}
+.idea-card .pitch{color:var(--cream);font-size:15px;margin-bottom:10px}
+.idea-card p{color:var(--cream-dim);font-size:14px;margin-bottom:8px}
+.idea-card p b{color:var(--cream)}
+.idea-card .steps{margin:0 0 10px 18px;color:var(--cream-dim);font-size:14px}
+.idea-card .steps li{margin-bottom:3px}
+.idea-card .lic-note{color:var(--amber);font-size:13px}
+.idea-video{width:100%;height:auto;display:block;border:1px solid var(--line);background:#000;aspect-ratio:16/9;margin:12px 0}
+.capbox{border:1px dashed var(--line);background:#181310;padding:12px 14px;margin:10px 0}
+.capbox .cap{white-space:pre-wrap;color:var(--cream-dim);font-size:13.5px;margin-bottom:10px}
+.mini-btn{background:none;border:1px solid var(--line);color:var(--amber);cursor:pointer;font-size:12.5px;font-weight:600;padding:6px 10px}
+.idea-empty{color:var(--mut);font-size:14.5px;border:1px dashed var(--line);padding:16px;grid-column:1/-1}
+.clip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:22px}
+.clipfig{margin:0}
+.clipfig figcaption{color:var(--mut);font-size:13px;margin-top:8px}
+.clipfig figcaption b{color:var(--cream)}
+.next{margin-top:30px;border:1px solid var(--line);background:var(--panel);padding:20px;max-width:760px}
+.next h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:17px;margin-bottom:8px}
+.next p{color:var(--cream-dim);font-size:14.5px;margin-bottom:12px}
+footer{border-top:1px solid var(--line);padding:26px 0 34px;margin-top:40px}
+footer .disc{color:var(--mut);font-size:12.5px;max-width:760px}
+footer .fbrand{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--cream-dim);font-size:13px}
+footer .fbrand span{color:var(--orange)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="StartBusiness24 hub">
+      <span class="bmark">S</span><span class="bname">STARTBUSINESS<span>24</span></span>
+    </a>
+    <nav class="main" aria-label="Tools">
+      <a href="index.html">Hub</a>
+      <a href="name-generator.html">Name Search</a>
+      <a href="brand-studio.html">Brand Studio</a>
+      <a href="funding.html">Funding</a>
+      <a href="delegation.html">Delegation</a>
+    </nav>
+    <a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a>
+  </div>
+</header>
+
+<main>
+<section class="block">
+  <div class="wrap">
+    <p class="kick">■ Free Tools — Smart Business Ideas</p>
+    <h1>Smart Business <em>Ideas</em></h1>
+    <p class="lede">Eighteen smart ways into six trades that never stop needing people: cleaning, moving, handyman, landscaping, pressure washing, and junk removal. Pick your trade, your budget, and how you like to work — get the ideas, the startup cost estimates, the first three steps, and a narrated clip for every trade.</p>
+
+    <div class="tool" id="ideaTool">
+      <div class="tool-grid">
+        <label class="fld"><span>Trade</span><select id="biTrade">
+          <option value="any" selected>Any trade</option>
+          <option value="cleaning">Cleaning</option>
+          <option value="moving">Moving</option>
+          <option value="handyman">Handyman</option>
+          <option value="landscaping">Landscaping</option>
+          <option value="pressure-washing">Pressure Washing</option>
+          <option value="junk-removal">Junk Removal</option>
+        </select></label>
+        <label class="fld"><span>Starting budget</span><select id="biBudget">
+          <option value="any" selected>Any budget</option>
+          <option value="u500">Under $500</option>
+          <option value="mid">$500–$2,500</option>
+          <option value="plus">$2,500+</option>
+        </select></label>
+        <label class="fld"><span>How you like to work</span><select id="biStyle">
+          <option value="any" selected>Any style</option>
+          <option value="solo">Solo weekend</option>
+          <option value="crew">Crew</option>
+          <option value="route">Route-based</option>
+        </select></label>
+      </div>
+      <div class="btnrow"><button type="button" class="btn" id="biGo">Generate My Ideas</button></div>
+      <p class="tool-status" id="biStatus" role="status">Your first three ideas are below — hit Generate for a fresh combination.</p>
+    </div>
+
+    <div class="idea-grid" id="biResults"></div>
+
+    <p class="honest">Startup costs on this page are estimates — your gear, your state, and your prices set the real number. Ideas flagged “license check” sit in trades where states or cities commonly require a license or permit: check your state and local license rules before you start. Nothing here promises work or results; it is a starting map, not a forecast.</p>
+
+    <h2 style="margin-top:44px">Every Trade, <span style="color:var(--orange)">One Clip Each</span></h2>
+    <p class="lede" style="font-size:15px;margin-top:8px">Six short narrated clips — the smartest angle in each trade, why it works, the three ideas, and what it costs to start. Tap play on any of them.</p>
+    <div class="clip-grid" id="biClips">
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-cleaning.mp4" poster="assets/idea-cleaning-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Cleaning — sell the route, not the job"></video>
+        <figcaption><b>Cleaning.</b> Sell the route, not the job.</figcaption>
+      </figure>
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-moving.mp4" poster="assets/idea-moving-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Moving — sell hands, not a truck"></video>
+        <figcaption><b>Moving.</b> Sell hands, not a truck.</figcaption>
+      </figure>
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-handyman.mp4" poster="assets/idea-handyman-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Handyman — own the small jobs"></video>
+        <figcaption><b>Handyman.</b> Own the small jobs.</figcaption>
+      </figure>
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-landscaping.mp4" poster="assets/idea-landscaping-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Landscaping — sell the street, weekly"></video>
+        <figcaption><b>Landscaping.</b> Sell the street, weekly.</figcaption>
+      </figure>
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-pressure-washing.mp4" poster="assets/idea-pressure-washing-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Pressure Washing — one driveway sells the next"></video>
+        <figcaption><b>Pressure Washing.</b> One driveway sells the next.</figcaption>
+      </figure>
+      <figure class="clipfig">
+        <video class="idea-video" src="assets/idea-junk-removal.mp4" poster="assets/idea-junk-removal-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: Junk Removal — one item starts a route"></video>
+        <figcaption><b>Junk Removal.</b> One item starts a route.</figcaption>
+      </figure>
+    </div>
+
+    <div class="next">
+      <h3>Found the one?</h3>
+      <p>An idea is step zero. The path from here: name it with the Name Search Generator, then form the company — the same walk the hub lays out from idea to launch.</p>
+      <div class="btnrow">
+        <a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a>
+        <a class="btn small ghost" href="name-generator.html">Name It First</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disc">Educational only — not legal, tax, or investment advice. No income or results promised. Filing details and timing are set by your state. StartBusiness24 by Capital 7 Logistics.</p>
+    <p style="margin-top:10px"><span class="fbrand">STARTBUSINESS<span>24</span></span> · C Corp in Seconds · by Capital 7 Logistics</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var doc = document;
+
+var START_URL = "https://startbusiness24.whop.site/start";
+var SITE_URL = "https://startbusiness24.whop.site/";
+var IDEAS = [{"budgetTier":"u500","costHigh":600,"costLabel":"$150–$600 startup estimate","costLow":150,"difficulty":"weekend","file":"What you'd file: most solo operators start as a single-member LLC; a C-Corp only enters the picture when partners or investors do.","hashtags":["#CleaningBusiness","#SmallBusinessIdeas","#SideHustle","#StartABusiness"],"id":"cleaning-routes","name":"Recurring Home Cleaning Routes","pitch":"Sell tidy homes on a weekly or bi-weekly route, not one-off jobs.","shortPitch":"Weekly and bi-weekly home routes, not one-off jobs.","steps":["Offer a first-clean special to 10 homes on one street","Set weekly and bi-weekly route days by neighborhood","Ask every client for one neighbor referral"],"styles":["solo","route"],"trade":"cleaning","tradeLabel":"Cleaning","why":["Homes need cleaning every week, so one happy street becomes a standing route.","Recurring bookings smooth out the slow weeks that sink one-off services."]},{"budgetTier":"u500","costHigh":900,"costLabel":"$250–$900 startup estimate","costLow":250,"difficulty":"weekend","file":"What you'd file: a single-member LLC is the common start; if a partner is splitting ownership with you, compare LLC vs C-Corp in the formation flow first.","hashtags":["#CleaningBusiness","#SmallBusinessIdeas","#SideHustle","#StartABusiness"],"id":"cleaning-moveout","name":"Move-Out and Turnover Cleaning","pitch":"Clean empty rentals and homes between tenants for landlords and realtors.","shortPitch":"Empty-home cleans for landlords and realtors, on deadline.","steps":["Build a move-out checklist landlords can hand to tenants","Pitch 5 local property managers and realtors in person","Price by bedrooms with same-week turnaround"],"styles":["solo","crew"],"trade":"cleaning","tradeLabel":"Cleaning","why":["Every move-out has a deadline, so property managers pay for speed and reliability.","Empty homes are faster to clean — no furniture, no small talk, just the checklist."]},{"budgetTier":"mid","costHigh":1800,"costLabel":"$600–$1,800 startup estimate","costLow":600,"difficulty":"weekend","file":"What you'd file: an LLC is the common start for a small crew; compare a C-Corp only if investors are part of the plan.","hashtags":["#CleaningBusiness","#SmallBusinessIdeas","#SideHustle","#StartABusiness"],"id":"cleaning-str","name":"Short-Term Rental Turnover Partner","pitch":"Be the on-call cleaning crew for Airbnb and vacation-rental hosts.","shortPitch":"On-call turnover cleans for short-term rental hosts.","steps":["List your service in host groups and local realtor boards","Stock two full linen sets per unit so turnovers never wait on laundry","Send hosts a photo report after every clean"],"styles":["crew","route"],"trade":"cleaning","tradeLabel":"Cleaning","why":["Hosts live and die by guest reviews, and cleanliness is the review that matters most.","Turnovers repeat on a calendar, so the work stacks into predictable route days."]},{"budgetTier":"u500","costHigh":700,"costLabel":"$200–$700 startup estimate","costLow":200,"difficulty":"license","file":"What you'd file: an LLC is the common start for a small crew; if a partner shares ownership, compare LLC vs C-Corp in the formation flow first.","hashtags":["#MovingBusiness","#SmallBusinessIdeas","#MovingDay","#StartABusiness"],"id":"moving-labor","name":"Labor-Only Moving Crew","pitch":"Rent no truck: sell strong, careful hands by the hour for people who rent their own.","shortPitch":"Careful hands by the hour — the customer rents the truck.","steps":["Buy two dollies, forearm straps, and moving blankets","List on local marketplaces as labor-only help","Ask every customer to book the truck while you confirm the crew"],"styles":["crew"],"trade":"moving","tradeLabel":"Moving","why":["Customers already rent the truck — what they cannot rent is careful help on the day.","No truck payment and no fuel bill: your costs are gear, straps, and showing up on time."]},{"budgetTier":"u500","costHigh":1000,"costLabel":"$400–$1,000 startup estimate","costLow":400,"difficulty":"license","file":"What you'd file: an LLC is the common start; add a C-Corp comparison only if outside investors are part of the plan.","hashtags":["#MovingBusiness","#SmallBusinessIdeas","#MovingDay","#StartABusiness"],"id":"moving-senior","name":"Senior Move and Downsizing Help","pitch":"Patient, careful moving help for seniors leaving a longtime home.","shortPitch":"Patient, planned moves for seniors and their families.","steps":["Offer a free in-home walkthrough and a written plan","Partner with realtors and estate-sale organizers","Add packing and donation drop-off as add-on services"],"styles":["crew"],"trade":"moving","tradeLabel":"Moving","why":["Families plan these moves for months and choose the crew they trust, not the cheapest bid.","The work is booked ahead, not last-minute, so your calendar fills early."]},{"budgetTier":"plus","costHigh":12000,"costLabel":"$4,000–$12,000 startup estimate","costLow":4000,"difficulty":"license","file":"What you'd file: an LLC is the common start for an owner-run truck; compare a C-Corp if partners or investors share the company.","hashtags":["#MovingBusiness","#SmallBusinessIdeas","#MovingDay","#StartABusiness"],"id":"moving-box-truck","name":"Small-Load Moving With Your Own Truck","pitch":"Run small loads and single-room moves with a used box truck you own outright.","shortPitch":"Small loads and single rooms with your own truck.","steps":["Price used box trucks with a mechanic's inspection before you buy","Set a minimum job fee so short runs still cover the day","Book labor-only jobs on the days the truck is free"],"styles":["crew"],"trade":"moving","tradeLabel":"Moving","why":["Big movers chase full houses; the one-room and small-load jobs sit unclaimed.","Owning the truck outright skips rental lines and rental-day scheduling fights."]},{"budgetTier":"u500","costHigh":800,"costLabel":"$200–$800 startup estimate","costLow":200,"difficulty":"license","file":"What you'd file: most solo handymen start as a single-member LLC; a C-Corp only enters the picture when partners or investors do.","hashtags":["#HandymanBusiness","#SmallBusinessIdeas","#HomeServices","#StartABusiness"],"id":"handyman-small-jobs","name":"Small-Job Specialist: The Honey-Do List Pro","pitch":"Take the small jobs big contractors refuse: mounts, patches, swaps, and fixes.","shortPitch":"The small jobs big contractors refuse, priced flat.","steps":["Publish a flat-price menu of 15 small jobs","Set a minimum visit fee so small jobs still pay their way","Text a photo report when each job is done"],"styles":["solo"],"trade":"handyman","tradeLabel":"Handyman","why":["Every home has a list of ten small jobs and nobody to call for them.","Small jobs finish the same day, so the review lands the same day too."]},{"budgetTier":"mid","costHigh":1800,"costLabel":"$500–$1,800 startup estimate","costLow":500,"difficulty":"license","file":"What you'd file: an LLC is the common start; if a partner shares ownership, compare LLC vs C-Corp in the formation flow first.","hashtags":["#HandymanBusiness","#SmallBusinessIdeas","#HomeServices","#StartABusiness"],"id":"handyman-rental","name":"Rental Turnover Repair Crew","pitch":"Between tenants, fix everything on the punch list for landlords and managers.","shortPitch":"Between-tenant fix lists, handled in one call.","steps":["Build a per-unit punch-list price sheet","Pitch property managers with a turnaround you can actually keep","Photograph before and after for the owner's file"],"styles":["solo","crew"],"trade":"handyman","tradeLabel":"Handyman","why":["Turnovers are deadline work, and managers need one call that handles the whole list.","One property manager can feed you units every single month."]},{"budgetTier":"mid","costHigh":2200,"costLabel":"$600–$2,200 startup estimate","costLow":600,"difficulty":"license","file":"What you'd file: a single-member LLC is the common start for a solo installer; compare a C-Corp only if partners or investors are in the plan.","hashtags":["#HandymanBusiness","#SmallBusinessIdeas","#HomeServices","#StartABusiness"],"id":"handyman-safety","name":"Home Safety and Aging-in-Place Installs","pitch":"Grab bars, railings, and lighting for homeowners who plan to stay put.","shortPitch":"Grab bars, rails, and lighting for aging in place.","steps":["Create a home-safety walkthrough checklist","Partner with realtors and senior centers in your area","Offer a written quote with a photo of each planned fix"],"styles":["solo"],"trade":"handyman","tradeLabel":"Handyman","why":["Families arrange this work for their parents and book the installer they trust.","The jobs are planned, indoor, and year-round — no weather cancellations."]},{"budgetTier":"u500","costHigh":1000,"costLabel":"$300–$1,000 startup estimate","costLow":300,"difficulty":"weekend","file":"What you'd file: a single-member LLC is the common start for a solo operator; an LLC also fits a two-person crew splitting the work.","hashtags":["#LandscapingBusiness","#SmallBusinessIdeas","#LawnCare","#StartABusiness"],"id":"landscaping-cleanup","name":"Curb-Appeal Cleanup Crews","pitch":"One-day yard rescues: overgrowth, beds, mulch, and hauling in a single visit.","shortPitch":"One-day yard rescues with before-and-after proof.","steps":["Price cleanups from photos the customer texts you","Bring mulch and bed edging as add-ons, not errands","Ask for the listing agent's name on every seller job"],"styles":["solo","crew"],"trade":"landscaping","tradeLabel":"Landscaping","why":["Sellers, landlords, and new buyers all hit the same deadline: photo day or move-in day.","Before-and-after photos from one job sell the next three."]},{"budgetTier":"mid","costHigh":2400,"costLabel":"$800–$2,400 startup estimate","costLow":800,"difficulty":"weekend","file":"What you'd file: most route operators start as a single-member LLC; compare a C-Corp only if partners or investors share the company.","hashtags":["#LandscapingBusiness","#SmallBusinessIdeas","#LawnCare","#StartABusiness"],"id":"landscaping-mow-routes","name":"Mow and Edge Subscription Routes","pitch":"Weekly lawn routes on subscription — the same streets, the same day, every week.","shortPitch":"The same streets, the same day, every week.","steps":["Map one neighborhood and price by lot size","Offer the first mow at a try-us price to fill the route","Add leaf and cleanup upsells for the slow months"],"styles":["solo","route"],"trade":"landscaping","tradeLabel":"Landscaping","why":["Lawns grow every week whether the economy cooperates or not.","Tight routes mean more lawns per hour and less driving between jobs."]},{"budgetTier":"plus","costHigh":6000,"costLabel":"$2,600–$6,000 startup estimate","costLow":2600,"difficulty":"license","file":"What you'd file: an LLC is the common start; if you bring on a partner for a second route, compare LLC vs C-Corp in the formation flow first.","hashtags":["#LandscapingBusiness","#SmallBusinessIdeas","#LawnCare","#StartABusiness"],"id":"landscaping-treatments","name":"Lawn Care and Treatment Program","pitch":"Season-long fertilization and weed programs sold on top of mowing routes.","shortPitch":"Season-long fertilization and weed programs.","steps":["Check your state/local license rules before selling any treatment","Bundle treatments with your existing mowing routes first","Send customers a season calendar so visits are never a surprise"],"styles":["solo","route"],"trade":"landscaping","tradeLabel":"Landscaping","why":["Treatments are scheduled months ahead, so the calendar is set before the season starts.","A treated lawn advertises itself to every neighbor on the street."]},{"budgetTier":"u500","costHigh":1200,"costLabel":"$400–$1,200 startup estimate","costLow":400,"difficulty":"weekend","file":"What you'd file: most solo washers start as a single-member LLC; a C-Corp only enters the picture when partners or investors do.","hashtags":["#PressureWashing","#SmallBusinessIdeas","#BeforeAndAfter","#StartABusiness"],"id":"pressure-driveway-routes","name":"Driveway and Sidewalk Flat-Work Routes","pitch":"Sell sparkling driveways street by street with before-and-after photos.","shortPitch":"Street-by-street flat work, sold by photos.","steps":["Wash your own driveway and film the before-and-after","Offer a whole-street discount day to one neighborhood","Quote from photos so you never drive out for a free estimate"],"styles":["solo","route"],"trade":"pressure-washing","tradeLabel":"Pressure Washing","why":["Every driveway on the street is a visible ad for the next one.","Flat work is fast, repeatable, and easy to quote from a photo."]},{"budgetTier":"mid","costHigh":2000,"costLabel":"$700–$2,000 startup estimate","costLow":700,"difficulty":"weekend","file":"What you'd file: a single-member LLC is the common start; an LLC also fits a two-person crew splitting the work.","hashtags":["#PressureWashing","#SmallBusinessIdeas","#BeforeAndAfter","#StartABusiness"],"id":"pressure-realtor-bundles","name":"House Wash and Driveway Bundles for Realtors","pitch":"Make listed homes photo-ready: soft wash, driveway, and walkway in one visit.","shortPitch":"Photo-ready homes: wash, driveway, walkway, one visit.","steps":["Build a one-page bundle menu priced by home size","Drop samples at 10 realty offices with before-and-after cards","Book the wash for the same week the listing photos are scheduled"],"styles":["solo","crew"],"trade":"pressure-washing","tradeLabel":"Pressure Washing","why":["Sellers and realtors work to photo deadlines, and curb appeal is the first photo online.","Bundles raise the ticket without adding a second trip."]},{"budgetTier":"plus","costHigh":7500,"costLabel":"$2,800–$7,500 startup estimate","costLow":2800,"difficulty":"license","file":"What you'd file: an LLC is the common start for a route business; compare a C-Corp if partners or investors share the company.","hashtags":["#PressureWashing","#SmallBusinessIdeas","#BeforeAndAfter","#StartABusiness"],"id":"pressure-commercial","name":"Commercial Lot and Storefront Route","pitch":"Monthly pressure washing routes for storefronts, sidewalks, and dumpster pads.","shortPitch":"Monthly storefront and sidewalk washing contracts.","steps":["Walk one shopping strip and note every dirty storefront","Offer a first wash plus a monthly route price in writing","Start before opening hours so owners see zero disruption"],"styles":["crew","route"],"trade":"pressure-washing","tradeLabel":"Pressure Washing","why":["Businesses need it on a schedule, and contracts repeat every month.","Early-morning work leaves your days free for residential jobs."]},{"budgetTier":"u500","costHigh":900,"costLabel":"$250–$900 startup estimate","costLow":250,"difficulty":"weekend","file":"What you'd file: an LLC is the common start for a small crew; if a partner shares ownership, compare LLC vs C-Corp in the formation flow first.","hashtags":["#JunkRemoval","#SmallBusinessIdeas","#CleanoutCrew","#StartABusiness"],"id":"junk-single-item","name":"Single-Item Pickup Runs","pitch":"Fast pickup for the one couch, fridge, or mattress blocking somebody's week.","shortPitch":"One couch, one fridge, one mattress — picked up fast.","steps":["Quote from a photo so price fights end before you roll","Batch pickups by neighborhood into one route","Use permitted disposal sites and keep the receipts as part of the service"],"styles":["crew","route"],"trade":"junk-removal","tradeLabel":"Junk Removal","why":["One unwanted item is urgent to the owner and quick for a two-person crew.","Short jobs stack: several pickups fit one route and one dump run."]},{"budgetTier":"mid","costHigh":2600,"costLabel":"$900–$2,600 startup estimate","costLow":900,"difficulty":"weekend","file":"What you'd file: an LLC is the common start for a cleanout crew; compare a C-Corp only if outside investors are part of the plan.","hashtags":["#JunkRemoval","#SmallBusinessIdeas","#CleanoutCrew","#StartABusiness"],"id":"junk-estate-cleanouts","name":"Estate and Eviction Cleanout Crew","pitch":"Full-property cleanouts for families, landlords, and attorneys on a deadline.","shortPitch":"Full-property cleanouts on closing and court deadlines.","steps":["Build a per-room cleanout price guide","Introduce yourself to estate attorneys and property managers","Sort donations and keepables as a written part of the service"],"styles":["crew"],"trade":"junk-removal","tradeLabel":"Junk Removal","why":["Cleanouts come with court dates and closing dates — the deadline does the selling.","One cleanout can equal a week of single-item runs."]},{"budgetTier":"plus","costHigh":9000,"costLabel":"$3,000–$9,000 startup estimate","costLow":3000,"difficulty":"license","file":"What you'd file: an LLC is the common start for a route business; if a partner shares ownership, compare LLC vs C-Corp in the formation flow first.","hashtags":["#JunkRemoval","#SmallBusinessIdeas","#CleanoutCrew","#StartABusiness"],"id":"junk-debris-route","name":"Construction Debris Route for Remodelers","pitch":"Scheduled debris pickup for remodel crews who lose hours hauling their own waste.","shortPitch":"Scheduled debris pickup for remodel crews.","steps":["Visit three active remodel sites and offer a first pickup","Price by trailer load with a photo confirmation","Set fixed pickup days so crews can plan around you"],"styles":["crew","route"],"trade":"junk-removal","tradeLabel":"Junk Removal","why":["Remodelers would rather pay for pickup than pull a crew off the job to dump.","Job sites repeat weekly while the project runs — a route, not a one-off."]}];
+var TIER = { u500: 0, mid: 1, plus: 2 };
+var DIFF_LABEL = { weekend: "Weekend start", license: "License check" };
+
+function escHtml(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+function copyText(text, statusEl){
+  function done(){ if (statusEl) statusEl.textContent = "Copied — paste it wherever you post."; }
+  function fail(){ if (statusEl) statusEl.textContent = "Copy did not go through — select the caption text and copy it manually."; }
+  if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+    var r;
+    try { r = navigator.clipboard.writeText(text); } catch (e) { fail(); return; }
+    if (r && r.then) r.then(done, fail); else done();
+  } else { fail(); }
+}
+
+/* Park–Miller RNG, same family as the name generator: the combination
+ * changes on every Generate, and the seed keeps moving between clicks. */
+var biSeed = 20261021;
+function biRnd(){
+  biSeed = (biSeed * 48271) % 2147483647;
+  return biSeed / 2147483647;
+}
+
+var biTradeEl = doc.getElementById("biTrade");
+var biBudgetEl = doc.getElementById("biBudget");
+var biStyleEl = doc.getElementById("biStyle");
+var biGoEl = doc.getElementById("biGo");
+var biStatusEl = doc.getElementById("biStatus");
+var biResultsEl = doc.getElementById("biResults");
+
+var biCurrent = [];
+var biLastTopId = null;
+
+function captionFor(idea){
+  return idea.name + ": " + idea.pitch + "\n" + idea.hashtags.join(" ") +
+    "\nfull business info at StartBusiness24: " + SITE_URL;
+}
+function formHref(idea){
+  return START_URL + "?idea=" + encodeURIComponent(idea.name);
+}
+function clipHtml(idea){
+  return '<video class="idea-video" src="assets/idea-' + idea.trade + '.mp4" poster="assets/idea-' +
+    idea.trade + '-poster.jpg" controls preload="none" playsinline aria-label="Smart business ideas clip: ' +
+    escHtml(idea.tradeLabel) + '"></video>';
+}
+function cardHtml(idea, idx){
+  var lic = idea.difficulty === "license";
+  var steps = idea.steps.map(function(s){ return "<li>" + escHtml(s) + "</li>"; }).join("");
+  return '<article class="idea-card">' +
+    '<div class="idea-top"><span class="chip trade">' + escHtml(idea.tradeLabel) + '</span>' +
+    '<span class="chip' + (lic ? " lic" : "") + '">' + DIFF_LABEL[idea.difficulty] + '</span></div>' +
+    "<h4>" + escHtml(idea.name) + "</h4>" +
+    '<p class="pitch">' + escHtml(idea.pitch) + "</p>" +
+    "<p><b>Why it works:</b> " + escHtml(idea.why.join(" ")) + "</p>" +
+    "<p><b>Startup cost:</b> " + escHtml(idea.costLabel) + "</p>" +
+    '<ol class="steps">' + steps + "</ol>" +
+    "<p>" + escHtml(idea.file) + "</p>" +
+    (lic ? '<p class="lic-note">License check: this trade commonly needs a license or permit — check your state/local license rules before you start.</p>' : "") +
+    clipHtml(idea) +
+    '<div class="capbox"><p class="cap">' + escHtml(captionFor(idea)) + "</p>" +
+    '<button type="button" class="mini-btn" data-bi-copy="' + idx + '">Copy caption</button></div>' +
+    '<a class="btn small" href="' + formHref(idea) + '">Form this business →</a>' +
+    "</article>";
+}
+function biPick(){
+  var trade = biTradeEl ? biTradeEl.value : "any";
+  var budget = biBudgetEl ? biBudgetEl.value : "any";
+  var style = biStyleEl ? biStyleEl.value : "any";
+  var pool = IDEAS.filter(function(idea){
+    if (trade !== "any" && idea.trade !== trade) return false;
+    if (style !== "any" && idea.styles.indexOf(style) === -1) return false;
+    if (budget !== "any" && TIER[idea.budgetTier] > TIER[budget]) return false;
+    return true;
+  });
+  var scored = pool.map(function(idea){
+    var score = 0;
+    if (budget !== "any") score += (idea.budgetTier === budget) ? 3 : 1;
+    if (style !== "any") score += 2;
+    if (trade !== "any") score += 1;
+    return { idea: idea, score: score, r: biRnd() };
+  });
+  scored.sort(function(a, b){ return (b.score - a.score) || (a.r - b.r); });
+  var top = scored.slice(0, 3).map(function(s){ return s.idea; });
+  if (top.length > 1 && biLastTopId && top[0].id === biLastTopId) top.push(top.shift());
+  if (top.length) biLastTopId = top[0].id;
+  return top;
+}
+function biGenerate(){
+  biCurrent = biPick();
+  if (!biResultsEl) return biCurrent;
+  if (!biCurrent.length) {
+    biResultsEl.innerHTML = '<p class="idea-empty">No idea matches that exact mix yet — loosen one dial (a bigger budget, or “Any style”) and generate again.</p>';
+    if (biStatusEl) biStatusEl.textContent = "No match for that mix — try loosening one dial.";
+    return biCurrent;
+  }
+  biResultsEl.innerHTML = biCurrent.map(cardHtml).join("");
+  if (biStatusEl) biStatusEl.textContent = "Here are " + biCurrent.length + " ideas for your mix — Generate again for a fresh combination.";
+  return biCurrent;
+}
+if (biGoEl) biGoEl.addEventListener("click", biGenerate);
+if (biResultsEl) biResultsEl.addEventListener("click", function(ev){
+  var t = ev && ev.target;
+  while (t && !(t.getAttribute && t.getAttribute("data-bi-copy") !== null && t.getAttribute("data-bi-copy") !== undefined))
+    t = t.parentNode;
+  if (!t || !t.getAttribute) return;
+  var idx = parseInt(t.getAttribute("data-bi-copy"), 10);
+  if (isNaN(idx) || !biCurrent[idx]) return;
+  copyText(captionFor(biCurrent[idx]), biStatusEl);
+});
+biGenerate();
+
+/* exposed for the harness test */
+window.SB24_IDEAS = {
+  IDEAS: IDEAS, START_URL: START_URL, SITE_URL: SITE_URL,
+  generate: biGenerate, captionFor: captionFor, formHref: formHref,
+  results: function(){ return biCurrent; },
+  count: function(){ return IDEAS.length; }
+};
+})();
+</script>
+</body>
+</html>
