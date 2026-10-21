@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name Search Generator — StartBusiness24</title>
+<meta name="description" content="Bring your own business name or search for one — then run the trademark self-check against the official USPTO and state records before you file.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0a08;--panel:#1e1813;--line:#33291f;--cream:#f4ecdc;--cream-dim:#cbbfa9;--mut:#9a8b74;
+--orange:#ff5a1f;--orange2:#ff8a3d;--amber:#e3bd85;--ink:#161210}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(12,10,8,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream);margin-right:auto}
+.bmark{width:34px;height:34px;background:var(--orange);color:var(--ink);display:flex;align-items:center;justify-content:center;
+font-weight:900;font-size:19px;font-family:'Oswald',sans-serif;box-shadow:0 0 20px rgba(255,90,31,.4)}
+.bname{font-size:19px;font-weight:700;letter-spacing:.05em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+.bname span{color:var(--orange)}
+nav.main{display:flex;gap:16px;flex-wrap:wrap}
+nav.main a{color:var(--cream-dim);text-decoration:none;font-size:14px;font-weight:600}
+nav.main a:hover,nav.main a[aria-current]{color:var(--orange2)}
+.btn{display:inline-block;background:var(--orange);color:var(--ink);border:2px solid var(--ink);cursor:pointer;
+font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14.5px;
+padding:12px 20px;text-decoration:none;box-shadow:3px 3px 0 #000}
+.btn.small{font-size:13px;padding:9px 14px;box-shadow:2px 2px 0 #000}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--line);box-shadow:none}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+.btn[disabled]{opacity:.45;cursor:default;transform:none}
+main{display:block}
+section.block{padding:52px 0 30px}
+.kick{color:var(--orange2);font-weight:800;letter-spacing:.2em;font-size:11.5px;text-transform:uppercase}
+h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(30px,5.6vw,46px);line-height:1.05;margin:10px 0 12px}
+h1 em{font-style:normal;color:var(--orange)}
+.lede{color:var(--cream-dim);font-size:16.5px;max-width:700px}
+.tool{margin-top:26px;border:1px solid var(--line);background:var(--panel);padding:22px;max-width:760px}
+.mode-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.mode-tab{flex:1;min-width:140px;background:#171310;border:1px solid var(--line);color:var(--cream-dim);
+font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:14px;padding:11px 10px;cursor:pointer}
+.mode-tab.is-on{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+.fld{display:block;margin-bottom:14px}
+.fld span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fld input[type="text"],.fld input[type="number"],.fld select{width:100%;background:#100d0a;border:1px solid var(--line);
+color:var(--cream);font-family:'Inter',sans-serif;font-size:16px;padding:12px 13px;outline:none}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 4px}
+.tool-status{color:var(--amber);font-size:14px;min-height:20px;margin-top:10px}
+.honest{margin-top:16px;color:var(--mut);font-size:13px;border-top:1px dashed var(--line);padding-top:12px;max-width:700px}
+.ng-results{margin-top:14px}
+.ng-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);
+background:#181310;padding:11px 13px;margin-bottom:8px;flex-wrap:wrap}
+.ng-name{font-weight:700;font-size:16.5px}
+.check-panel{margin-top:18px;border:1px solid var(--amber);background:#221a12;padding:18px}
+.check-panel h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:17px;color:var(--amber);margin-bottom:8px}
+.check-copy{color:var(--cream-dim);font-size:14.5px;margin-bottom:12px;max-width:640px}
+.next{margin-top:30px;border:1px solid var(--line);background:var(--panel);padding:20px;max-width:760px}
+.next h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:17px;margin-bottom:8px}
+.next p{color:var(--cream-dim);font-size:14.5px;margin-bottom:12px}
+footer{border-top:1px solid var(--line);padding:26px 0 34px;margin-top:40px}
+footer .disc{color:var(--mut);font-size:12.5px;max-width:760px}
+footer .fbrand{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--cream-dim);font-size:13px}
+footer .fbrand span{color:var(--orange)}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="StartBusiness24 hub">
+      <span class="bmark">S</span><span class="bname">STARTBUSINESS<span>24</span></span>
+    </a>
+    <nav class="main" aria-label="Tools">
+      <a href="index.html">Hub</a>
+      <a href="name-generator.html" aria-current="page">Name Search</a>
+      <a href="brand-studio.html">Brand Studio</a>
+      <a href="funding.html">Funding</a>
+      <a href="delegation.html">Delegation</a>
+    </nav>
+    <a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a>
+  </div>
+</header>
+
+<main>
+<section class="block">
+  <div class="wrap">
+    <p class="kick">■ Step 1 of the Path — Name</p>
+    <h1>Name Search <em>Generator</em></h1>
+    <p class="lede">Bring a name you already picked, or search for one by trade and style. Either way, run the trademark self-check against the official records before you file — a name is the first asset, and it has to be one you can actually use.</p>
+
+    <div class="tool" id="nameTool">
+      <div class="mode-tabs">
+        <button type="button" class="mode-tab is-on" id="ngTabSelf" aria-pressed="true">Name it yourself</button>
+        <button type="button" class="mode-tab" id="ngTabSearch" aria-pressed="false">Search for names</button>
+      </div>
+      <div id="ngPanelSelf">
+        <label class="fld"><span>Your business name</span><input type="text" id="ngOwn" placeholder="Type the name you picked" autocomplete="off"></label>
+        <div class="btnrow">
+          <a class="btn" id="ngOwnStart" href="https://startbusiness24.whop.site/start">Start with this name</a>
+          <button type="button" class="btn ghost" id="ngOwnCheck">Check it&rsquo;s not trademarked</button>
+        </div>
+        <p class="tool-status" id="ngOwnStatus" role="status">Already have a name? Carry it straight into formation — and run the trademark self-check first.</p>
+      </div>
+      <div id="ngPanelSearch" hidden>
+        <label class="fld"><span>Trade or keyword</span><input type="text" id="ngKeyword" placeholder="e.g. plumbing, coffee, detailing" autocomplete="off"></label>
+        <label class="fld"><span>Style</span><select id="ngStyle">
+          <option value="modern">Modern</option>
+          <option value="classic">Classic</option>
+          <option value="local">Local &amp; Trusted</option>
+          <option value="bold">Bold</option>
+        </select></label>
+        <label class="fld"><span>Town (optional)</span><input type="text" id="ngTown" placeholder="e.g. Scranton" autocomplete="off"></label>
+        <div class="btnrow">
+          <button type="button" class="btn" id="ngGo">Generate Names</button>
+          <button type="button" class="btn ghost" id="ngAgain" disabled>Fresh Set &#8635;</button>
+        </div>
+        <p class="tool-status" id="ngStatus" role="status">Pick a style and generate — every name gets a Start button and a trademark Check button.</p>
+        <div class="ng-results" id="ngResults"></div>
+      </div>
+      <div class="check-panel" id="ngCheck" hidden>
+        <h4>Trademark self-check — <span id="ngCheckName"></span></h4>
+        <p class="check-copy">Search the exact name AND close spellings and sound-alikes. If a live trademark already covers that name in the same line of business, pick a different name. This is a self-check guide, not a legal opinion — the official records below are where the answer lives.</p>
+        <div class="btnrow">
+          <a class="btn small" href="https://tmsearch.uspto.gov/" target="_blank" rel="noopener">USPTO Trademark Search</a>
+          <a class="btn small ghost" href="https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx" target="_blank" rel="noopener">Delaware Entity Search</a>
+          <a class="btn small ghost" href="https://wyobiz.wyo.gov/" target="_blank" rel="noopener">Wyoming Business Search</a>
+          <button type="button" class="btn small ghost" id="ngCopyName">Copy name</button>
+        </div>
+        <p class="tool-status" id="ngCheckStatus" role="status">Copy the name, open each record, and search it there.</p>
+        <div class="btnrow">
+          <button type="button" class="btn ghost" id="ngTaken">This name is taken — suggest alternatives</button>
+        </div>
+      </div>
+      <p class="honest">Name ideas are a starting point — availability and trademark are checked with your state and the USPTO at filing. This tool does not verify availability, and no name here is cleared or approved.</p>
+    </div>
+
+    <div class="next">
+      <h3 class="cond">Next on the path</h3>
+      <p>Got your name? Step 2 is forming the company — LLC or C-Corp in Delaware or Wyoming, priced before you are charged. After that: brand, EIN, funding, equipment, running it, and the training.</p>
+      <div class="btnrow">
+        <a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a>
+        <a class="btn small ghost" href="index.html">Back to the Full Path</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disc">Educational only — not legal, tax, or investment advice. No income or results promised. Filing details and timing are set by your state. StartBusiness24 by Capital 7 Logistics.</p>
+    <p style="margin-top:10px"><span class="fbrand">STARTBUSINESS<span>24</span></span> · C Corp in Seconds · by Capital 7 Logistics</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var START_URL = "https://startbusiness24.whop.site/start";
+var doc = document;
+
+function escHtml(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+function copyText(text, statusEl){
+  function done(){ if (statusEl) statusEl.textContent = "Copied \u2014 paste it wherever you work."; }
+  function fail(){ if (statusEl) statusEl.textContent = "Copy did not go through \u2014 select the text and copy it manually."; }
+  if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+    var r;
+    try { r = navigator.clipboard.writeText(text); } catch (e) { fail(); return; }
+    if (r && r.then) r.then(done, fail); else done();
+  } else { fail(); }
+}
+
+/* ===== Name Search Generator — same engine as the hub page ===== */
+var NG_STYLES = {
+  modern:  { pre: ["Apex","Nova","Vertex","Lumen","Arc","Pulse","North","Summit","Ember","Orbit","Flux","Prime"],
+             suf: ["Labs","Works","Co","Studio","Group","Ventures","Supply"] },
+  classic: { pre: ["Sterling","Hartford","Beacon","Atlas","Crown","Liberty","Union","Pioneer","Heritage","Granite"],
+             suf: ["& Sons","Brothers","Company","Associates","Enterprises","Trading Co"] },
+  local:   { pre: ["Main Street","Hometown","County Line","Neighborhood","Ridge","Valley"],
+             suf: ["Services","Solutions","Pros","Company","Group"] },
+  bold:    { pre: ["Iron","Titan","Blaze","Onyx","Storm","Forge","Rhino","Viper","Anvil","Havoc"],
+             suf: ["Industries","Crew","Force","Nation","Syndicate","Collective"] }
+};
+var ngSeed = 7;
+function ngCap(s){ s = String(s || "").replace(/\s+/g, " ").trim(); return s ? s.charAt(0).toUpperCase() + s.slice(1) : ""; }
+function ngTradeCore(keyword){
+  var k = ngCap(keyword).replace(/\s+(services|service|company|co|llc|inc|solutions|group)$/i, "");
+  return k.trim();
+}
+function ngGenerate(keyword, styleKey, town){
+  var style = NG_STYLES[styleKey] || NG_STYLES.modern;
+  var trade = ngTradeCore(keyword);
+  var townC = ngCap(town);
+  ngSeed = (ngSeed * 48271 + 12345) % 2147483647;
+  var offset = ngSeed % style.pre.length;
+  var pres = style.pre, sufs = style.suf;
+  var names = [], used = {};
+  function push(n){ n = String(n).replace(/\s+/g, " ").trim(); if (n && !used[n]) { used[n] = 1; names.push(n); } }
+  var i, p, s;
+  for (i = 0; i < pres.length && names.length < 12; i++) {
+    p = pres[(i + offset) % pres.length];
+    s = sufs[(i + Math.floor(i / 2) + offset) % sufs.length];
+    if (styleKey === "local" && townC && i % 2 === 0) push(townC + " " + (trade || "Trade") + " " + s);
+    else if (trade && i % 3 === 1) push(p + " " + trade + " " + s);
+    else if (trade && i % 3 === 2) push(trade + " " + s + " " + p);
+    else push(p + " " + (trade || "Trade") + " " + s);
+  }
+  for (i = 0; i < pres.length && names.length < 10; i++) {
+    push(pres[(i + offset + 3) % pres.length] + " " + sufs[(i + offset + 2) % sufs.length]);
+  }
+  if (townC && styleKey !== "local") push(townC + " " + pres[offset % pres.length] + " " + sufs[offset % sufs.length]);
+  return names.slice(0, 12);
+}
+var ngKeywordEl = doc.getElementById("ngKeyword");
+var ngStyleEl = doc.getElementById("ngStyle");
+var ngTownEl = doc.getElementById("ngTown");
+var ngGoEl = doc.getElementById("ngGo");
+var ngAgainEl = doc.getElementById("ngAgain");
+var ngStatusEl = doc.getElementById("ngStatus");
+var ngResultsEl = doc.getElementById("ngResults");
+var ngTabSelfEl = doc.getElementById("ngTabSelf");
+var ngTabSearchEl = doc.getElementById("ngTabSearch");
+var ngPanelSelfEl = doc.getElementById("ngPanelSelf");
+var ngPanelSearchEl = doc.getElementById("ngPanelSearch");
+var ngOwnEl = doc.getElementById("ngOwn");
+var ngOwnStartEl = doc.getElementById("ngOwnStart");
+var ngOwnCheckEl = doc.getElementById("ngOwnCheck");
+var ngOwnStatusEl = doc.getElementById("ngOwnStatus");
+var ngCheckEl = doc.getElementById("ngCheck");
+var ngCheckNameEl = doc.getElementById("ngCheckName");
+var ngCheckStatusEl = doc.getElementById("ngCheckStatus");
+var ngCopyNameEl = doc.getElementById("ngCopyName");
+var ngTakenEl = doc.getElementById("ngTaken");
+var ngRejected = [];
+var ngLastNames = [];
+var ngCurrentCheck = "";
+function ngIsRejected(n){ return ngRejected.indexOf(String(n).toLowerCase()) !== -1; }
+function ngGenerateFresh(keyword, styleKey, town){
+  var out = [], guard = 0;
+  while (out.length < 8 && guard < 6) {
+    guard++;
+    ngGenerate(keyword, styleKey, town).forEach(function(n){ if (!ngIsRejected(n)) out.push(n); });
+    var seen = {}, ded = [];
+    out.forEach(function(n){ if (!seen[n]) { seen[n] = 1; ded.push(n); } });
+    out = ded;
+  }
+  return out.slice(0, 12);
+}
+function ngShowMode(mode){
+  var self = mode !== "search";
+  if (ngPanelSelfEl) ngPanelSelfEl.hidden = !self;
+  if (ngPanelSearchEl) ngPanelSearchEl.hidden = self;
+  if (ngTabSelfEl) { ngTabSelfEl.classList.toggle("is-on", self); ngTabSelfEl.setAttribute("aria-pressed", self ? "true" : "false"); }
+  if (ngTabSearchEl) { ngTabSearchEl.classList.toggle("is-on", !self); ngTabSearchEl.setAttribute("aria-pressed", !self ? "true" : "false"); }
+}
+if (ngTabSelfEl) ngTabSelfEl.addEventListener("click", function(){ ngShowMode("self"); });
+if (ngTabSearchEl) ngTabSearchEl.addEventListener("click", function(){ ngShowMode("search"); });
+function ngSyncOwn(){
+  var v = ngOwnEl ? ngOwnEl.value.replace(/\s+/g, " ").trim() : "";
+  if (ngOwnStartEl) ngOwnStartEl.setAttribute("href", v ? START_URL + "?name=" + encodeURIComponent(v) : START_URL);
+  return v;
+}
+if (ngOwnEl) { ngOwnEl.addEventListener("input", ngSyncOwn); ngOwnEl.addEventListener("change", ngSyncOwn); }
+function ngShowCheck(name){
+  name = (name || "").replace(/\s+/g, " ").trim();
+  if (!name) {
+    if (ngOwnStatusEl) ngOwnStatusEl.textContent = "Type your name first \u2014 then run the check on it.";
+    return false;
+  }
+  ngCurrentCheck = name;
+  if (ngCheckNameEl) ngCheckNameEl.textContent = name;
+  if (ngCheckEl) ngCheckEl.hidden = false;
+  if (ngCheckStatusEl) ngCheckStatusEl.textContent = "Copy the name, open each official record below, and search it there \u2014 exact name, close spellings, and sound-alikes.";
+  return true;
+}
+if (ngOwnCheckEl) ngOwnCheckEl.addEventListener("click", function(){ ngShowCheck(ngSyncOwn()); });
+if (ngCopyNameEl) ngCopyNameEl.addEventListener("click", function(){ if (ngCurrentCheck) copyText(ngCurrentCheck, ngCheckStatusEl); });
+function ngRender(){
+  var names = ngGenerateFresh(ngKeywordEl ? ngKeywordEl.value : "",
+                              ngStyleEl ? ngStyleEl.value : "modern",
+                              ngTownEl ? ngTownEl.value : "");
+  ngLastNames = names;
+  var html = "";
+  names.forEach(function(n, i){
+    html += '<div class="ng-row"><span class="ng-name">' + escHtml(n) + '</span><span class="btnrow">' +
+      '<a class="btn small" href="' + START_URL + "?name=" + encodeURIComponent(n) + '">Start with this name</a>' +
+      '<button type="button" class="btn small ghost" data-ng-check="' + i + '">Check</button></span></div>';
+  });
+  if (ngResultsEl) ngResultsEl.innerHTML = html;
+  if (ngStatusEl) ngStatusEl.textContent = names.length + " fresh name ideas \u2014 Start files with one; Check runs the trademark self-check first.";
+  if (ngAgainEl) ngAgainEl.disabled = false;
+  return names;
+}
+if (ngGoEl) ngGoEl.addEventListener("click", ngRender);
+if (ngAgainEl) ngAgainEl.addEventListener("click", ngRender);
+if (ngResultsEl) ngResultsEl.addEventListener("click", function(ev){
+  var t = ev && ev.target;
+  while (t && t !== ngResultsEl) {
+    if (t.getAttribute && t.getAttribute("data-ng-check") !== null) {
+      ngShowCheck(ngLastNames[parseInt(t.getAttribute("data-ng-check"), 10)]);
+      return;
+    }
+    t = t.parentNode;
+  }
+});
+if (ngTakenEl) ngTakenEl.addEventListener("click", function(){
+  if (!ngCurrentCheck) return;
+  if (!ngIsRejected(ngCurrentCheck)) ngRejected.push(ngCurrentCheck.toLowerCase());
+  var gone = ngCurrentCheck;
+  ngCurrentCheck = "";
+  if (ngCheckEl) ngCheckEl.hidden = true;
+  ngShowMode("search");
+  ngRender();
+  if (ngStatusEl) ngStatusEl.textContent = "\u201C" + gone + "\u201D marked taken \u2014 it will not be offered again. Fresh ideas below; run the same check on the next pick.";
+});
+
+/* exposed for the harness test */
+window.SB24_NAME = {
+  START_URL: START_URL,
+  generate: ngGenerate,
+  generateFresh: ngGenerateFresh,
+  showCheck: ngShowCheck,
+  rejected: function(){ return ngRejected.slice(); },
+  lastNames: function(){ return ngLastNames.slice(); }
+};
+})();
+</script>
+</body>
+</html>

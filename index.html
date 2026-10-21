@@ -169,6 +169,62 @@ html.js .rv.in{opacity:1;transform:none}
   .chk-bar{transition:none}
 }
 </style>
+<style>
+/* ===== v3: full-path explorer + working tools ===== */
+.xp-btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px}
+.xp-step{justify-content:flex-start;font-size:13.5px;padding:9px 11px}
+.xp-step .xp-n{width:24px;height:24px;font-size:13px}
+.xp-step.xp-seen{border-color:var(--amber)}
+.xp-step.xp-seen .xp-n{border-color:var(--amber);color:var(--amber)}
+.xp-step.is-on .xp-n{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+.xp-prog{color:var(--orange2);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;margin-bottom:7px}
+.xp-link{display:inline-block;margin-top:11px;color:var(--orange2);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.tool{background:linear-gradient(180deg, rgba(34,27,20,.94), rgba(22,18,16,.94));border:1px solid var(--line);padding:18px}
+.fld{display:block;margin-bottom:12px}
+.fld>span{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:12.5px;color:var(--cream-dim);margin-bottom:6px}
+.fld input[type="text"],.fld input[type="number"],.fld select{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--cream);padding:11px 12px;font-size:15px;font-family:'Inter',sans-serif;border-radius:0}
+.fld input:focus,.fld select:focus{outline:2px solid var(--amber);outline-offset:1px}
+.fld input[type="range"]{width:100%;accent-color:var(--orange)}
+.honest{color:var(--mut);font-size:13px;margin-top:14px;max-width:720px}
+.tool-status{color:var(--cream-dim);font-size:13.5px;margin:11px 0 4px}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ng-results{display:grid;gap:9px;margin-top:12px}
+.ng-row{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);padding:10px 14px}
+.ng-name{font-family:'Oswald',sans-serif;font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.bs-out{background:#000;border:1px solid var(--line);padding:14px 16px;white-space:pre-wrap;font-size:14.5px;color:var(--cream);margin:6px 0 12px;line-height:1.6}
+.bs-plan{margin:0 0 14px 20px;color:var(--cream-dim);font-size:14.5px}
+.bs-plan li{margin-bottom:7px}
+.bs-plan b{color:var(--cream)}
+.dg-list{list-style:none;display:grid;gap:9px;margin:4px 0 14px}
+.dg-worker{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);padding:9px 13px;font-size:14.5px}
+.dg-worker b{color:var(--cream)}
+.dg-worker span{color:var(--cream-dim)}
+.mini-btn{background:none;border:1px solid var(--line);color:var(--cream-dim);padding:5px 11px;cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.05em;flex:none}
+.mini-btn:hover{border-color:var(--orange);color:var(--cream)}
+.dg-card{border:1px solid var(--orange);background:var(--panel);padding:14px 16px;margin-bottom:10px}
+.dg-card h4{font-size:16px;margin-bottom:5px}
+.dg-card p{color:var(--cream-dim);font-size:14px;margin-bottom:4px}
+.dg-card p b{color:var(--cream)}
+.dg-empty{color:var(--mut);font-size:14px;border:1px dashed var(--line);padding:12px 14px;margin-bottom:14px}
+/* v4 — name modes, trademark check panel, pricing */
+.mode-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.mode-tab{flex:1;min-width:140px;background:#171310;border:1px solid var(--line);color:var(--cream-dim);
+  font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:14px;
+  padding:11px 10px;cursor:pointer}
+.mode-tab.is-on{background:var(--orange);color:#161210;border-color:var(--orange)}
+.check-panel{margin-top:18px;border:1px solid var(--amber);background:#221a12;padding:18px}
+.check-panel h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:17px;color:var(--amber);margin-bottom:8px}
+.check-copy{color:var(--cream-dim);font-size:14.5px;margin-bottom:12px;max-width:640px}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:6px}
+.price-card{border:1px solid var(--line);background:var(--panel);padding:22px}
+.price-card.hot{border-color:var(--orange);box-shadow:0 0 30px rgba(255,90,31,.13)}
+.price-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:19px;letter-spacing:.02em;margin-bottom:6px}
+.price-big{font-family:'Oswald',sans-serif;font-size:34px;font-weight:700;color:var(--orange2);margin:4px 0 10px}
+.price-card p,.price-card li{color:var(--cream-dim);font-size:14.5px}
+.price-card ul{list-style:none;margin-top:8px}
+.price-card li{padding:5px 0 5px 18px;position:relative;border-bottom:1px dashed #2b2119}
+.price-card li:before{content:"▸";position:absolute;left:0;color:var(--orange)}
+</style>
 </head>
 <body>
 
@@ -223,20 +279,32 @@ html.js .rv.in{opacity:1;transform:none}
       <figcaption>Watch the whole process — from idea to launch, in under thirty seconds.</figcaption>
     </figure>
     <div class="xp" id="explorer">
-      <div class="xp-btns" role="group" aria-label="Explore the three steps">
-        <button type="button" class="xp-step is-on" data-step="1" data-seek="0" aria-pressed="true"><span class="xp-n">1</span> Idea</button>
-        <button type="button" class="xp-step" data-step="2" data-seek="4.2" aria-pressed="false"><span class="xp-n">2</span> Form</button>
-        <button type="button" class="xp-step" data-step="3" data-seek="13.2" aria-pressed="false"><span class="xp-n">3</span> Launch</button>
+      <div class="xp-btns" role="group" aria-label="Explore the eight steps of the full path">
+        <button type="button" class="xp-step is-on xp-seen" data-step="name" data-seek="0" aria-pressed="true"><span class="xp-n">1</span> Name</button>
+        <button type="button" class="xp-step" data-step="form" data-seek="4.2" aria-pressed="false"><span class="xp-n">2</span> Form</button>
+        <button type="button" class="xp-step" data-step="brand" data-seek="13.2" aria-pressed="false"><span class="xp-n">3</span> Brand</button>
+        <button type="button" class="xp-step" data-step="ein" data-seek="8.7" aria-pressed="false"><span class="xp-n">4</span> EIN</button>
+        <button type="button" class="xp-step" data-step="fund" data-seek="17.7" aria-pressed="false"><span class="xp-n">5</span> Fund</button>
+        <button type="button" class="xp-step" data-step="equip" data-seek="17.7" aria-pressed="false"><span class="xp-n">6</span> Equip</button>
+        <button type="button" class="xp-step" data-step="run" data-seek="17.7" aria-pressed="false"><span class="xp-n">7</span> Run</button>
+        <button type="button" class="xp-step" data-step="learn" data-seek="22.2" aria-pressed="false"><span class="xp-n">8</span> Learn</button>
       </div>
       <div class="xp-panel">
-        <h3 class="cond" id="xpTitle">Step 1 — Idea</h3>
-        <p id="xpText">Start with the business you are actually building — the questionnaire is built around your company, founders, and filing details. Tap a step to watch that part of the process.</p>
+        <p class="xp-prog" id="xpProgress">Step 1 of 8 — Name</p>
+        <h3 class="cond" id="xpTitle">Step 1 — Name</h3>
+        <p id="xpText">Every company starts as a name. Use the free Name Search Generator below to find name ideas from your trade and style — then run the trademark self-check and start the formation with the name you pick.</p>
+        <a class="xp-link" id="xpLink" href="name-generator.html">Open the Full Name Search Generator →</a>
       </div>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3 class="cond">Idea</h3><p>Start with the business you are actually building — the questionnaire is built around your company, founders, and filing details.</p></div>
-      <div class="step"><div class="n">2</div><h3 class="cond">Form</h3><p>Choose a C-Corp or LLC, in Delaware or Wyoming, and review the details and the total before anything is charged.</p></div>
-      <div class="step"><div class="n">3</div><h3 class="cond">Launch</h3><p>File through Whop, then build the rest of the stack below — website, kit, and your AI office — on top of a real company.</p></div>
+      <div class="step"><div class="n">1</div><h3 class="cond">Name</h3><p>Generate name ideas from your trade and style, and pick the one worth filing.</p></div>
+      <div class="step"><div class="n">2</div><h3 class="cond">Form</h3><p>Choose a C-Corp or LLC, in Delaware or Wyoming — price reviewed before anything is charged.</p></div>
+      <div class="step"><div class="n">3</div><h3 class="cond">Brand</h3><p>Logo, website, and cinematic shot prompts, built from the company you just formed.</p></div>
+      <div class="step"><div class="n">4</div><h3 class="cond">EIN</h3><p>Your federal tax ID — free from the IRS. For banking, taxes, and hiring.</p></div>
+      <div class="step"><div class="n">5</div><h3 class="cond">Fund</h3><p>Business credit lines or real estate funding through LoanableUSA, if you qualify.</p></div>
+      <div class="step"><div class="n">6</div><h3 class="cond">Equip</h3><p>The Startup Kit: record book, share certificates, contracts, checklist, and seal.</p></div>
+      <div class="step"><div class="n">7</div><h3 class="cond">Run</h3><p>Alice answers and books the jobs; delegate crew work with a dispatch plan.</p></div>
+      <div class="step"><div class="n">8</div><h3 class="cond">Learn</h3><p>Free Academy courses: business taxes, credit, first customers, and AI tools.</p></div>
     </div>
     <div class="states">
       <h3 class="cond">Delaware or Wyoming?</h3>
@@ -264,6 +332,66 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- NAME GENERATOR -->
+<section class="block rv" id="name" data-section="name" data-visual="assets/name-generator.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">10</span><h2 class="cond">Name Search Generator — Pick a Name Worth Filing</h2></div>
+    <p class="sdesc">Step 1 of the path. Bring a name you already picked, or search for one here — then run the trademark self-check against the official records before you file. Everything runs right here in your browser.</p>
+    <div class="split">
+      <figure>
+        <img class="sec-visual" src="assets/name-generator.svg" alt="The name search generator: a name tag reading Summit Ridge LLC, beside more name idea chips" loading="lazy">
+        <figcaption>A name is the first asset. Find one worth filing — then check it before you commit.</figcaption>
+      </figure>
+      <div class="tool" id="nameTool">
+        <div class="mode-tabs">
+          <button type="button" class="mode-tab is-on" id="ngTabSelf" aria-pressed="true">Name it yourself</button>
+          <button type="button" class="mode-tab" id="ngTabSearch" aria-pressed="false">Search for names</button>
+        </div>
+        <div id="ngPanelSelf">
+          <label class="fld"><span>Your business name</span><input type="text" id="ngOwn" placeholder="Type the name you picked" autocomplete="off"></label>
+          <div class="btnrow">
+            <a class="btn" id="ngOwnStart" href="https://startbusiness24.whop.site/start">Start with this name</a>
+            <button type="button" class="btn ghost" id="ngOwnCheck">Check it&rsquo;s not trademarked</button>
+          </div>
+          <p class="tool-status" id="ngOwnStatus" role="status">Already have a name? Carry it straight into formation — and run the trademark self-check first.</p>
+        </div>
+        <div id="ngPanelSearch" hidden>
+          <label class="fld"><span>Trade or keyword</span><input type="text" id="ngKeyword" placeholder="e.g. plumbing, coffee, detailing" autocomplete="off"></label>
+          <label class="fld"><span>Style</span><select id="ngStyle">
+            <option value="modern">Modern</option>
+            <option value="classic">Classic</option>
+            <option value="local">Local &amp; Trusted</option>
+            <option value="bold">Bold</option>
+          </select></label>
+          <label class="fld"><span>Town (optional)</span><input type="text" id="ngTown" placeholder="e.g. Scranton" autocomplete="off"></label>
+          <div class="btnrow">
+            <button type="button" class="btn" id="ngGo">Generate Names</button>
+            <button type="button" class="btn ghost" id="ngAgain" disabled>Fresh Set &#8635;</button>
+          </div>
+          <p class="tool-status" id="ngStatus" role="status">Pick a style and generate — every name gets a Start button and a trademark Check button.</p>
+          <div class="ng-results" id="ngResults"></div>
+        </div>
+        <div class="check-panel" id="ngCheck" hidden>
+          <h4>Trademark self-check — <span id="ngCheckName"></span></h4>
+          <p class="check-copy">Search the exact name AND close spellings and sound-alikes. If a live trademark already covers that name in the same line of business, pick a different name. This is a self-check guide, not a legal opinion — the official records below are where the answer lives.</p>
+          <div class="btnrow">
+            <a class="btn small" href="https://tmsearch.uspto.gov/" target="_blank" rel="noopener">USPTO Trademark Search</a>
+            <a class="btn small ghost" href="https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx" target="_blank" rel="noopener">Delaware Entity Search</a>
+            <a class="btn small ghost" href="https://wyobiz.wyo.gov/" target="_blank" rel="noopener">Wyoming Business Search</a>
+            <button type="button" class="btn small ghost" id="ngCopyName">Copy name</button>
+          </div>
+          <p class="tool-status" id="ngCheckStatus" role="status">Copy the name, open each record, and search it there.</p>
+          <div class="btnrow">
+            <button type="button" class="btn ghost" id="ngTaken">This name is taken — suggest alternatives</button>
+          </div>
+        </div>
+        <p class="honest">Name ideas are a starting point — availability and trademark are checked with your state and the USPTO at filing. This tool does not verify availability, and no name here is cleared or approved.</p>
+      </div>
+    </div>
+    <p style="margin-top:18px"><a class="xp-link" href="name-generator.html">Open the Name Search Generator on its own page →</a></p>
+  </div>
+</section>
+
 <!-- WEBSITE -->
 <section class="block rv" id="website" data-section="website" data-visual="assets/website-browser.svg">
   <div class="wrap">
@@ -281,6 +409,92 @@ html.js .rv.in{opacity:1;transform:none}
       <figure>
         <img class="sec-visual" src="assets/website-browser.svg" alt="A company website shown on a laptop browser and a phone, built from the company's incorporation details" loading="lazy">
         <figcaption>Your website, on desktop and phone, from the company you just formed.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STUDIO -->
+<section class="block rv" id="brand" data-section="brand" data-visual="assets/studio-camera.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">11</span><h2 class="cond">Brand Studio — Direct Your First Video Ad</h2></div>
+    <p class="sdesc">Step 3 of the path. Your brand needs footage — set the camera like a director (camera, lens, focal length, aperture, shot, mood) and the studio builds a production-ready prompt plus a 3-shot plan. Run the prompt in any AI video tool. The studio builds your shot prompt — it does not render the video.</p>
+    <div class="split">
+      <div class="tool" id="studioTool">
+        <label class="fld"><span>Camera</span><select id="bsCamera">
+          <option value="8K digital cinema camera">8K Digital Cinema</option>
+          <option value="70mm film camera">70mm Film</option>
+          <option value="Super 35 studio camera">S35 Studio</option>
+          <option value="16mm documentary camera">16mm Documentary</option>
+        </select></label>
+        <label class="fld"><span>Lens</span><select id="bsLens">
+          <option value="anamorphic">Anamorphic</option>
+          <option value="spherical prime">Spherical Prime</option>
+          <option value="vintage character">Vintage Character</option>
+          <option value="macro">Macro</option>
+        </select></label>
+        <label class="fld"><span>Focal length — <output id="bsFocalVal">35mm</output></span><input type="range" id="bsFocal" min="8" max="85" step="1" value="35"></label>
+        <label class="fld"><span>Aperture</span><select id="bsAperture">
+          <option value="f/1.4">f/1.4</option>
+          <option value="f/2">f/2</option>
+          <option value="f/2.8" selected>f/2.8</option>
+          <option value="f/4">f/4</option>
+          <option value="f/5.6">f/5.6</option>
+          <option value="f/8">f/8</option>
+          <option value="f/11">f/11</option>
+        </select></label>
+        <label class="fld"><span>Shot type</span><select id="bsShot">
+          <option value="closeup">Close-up</option>
+          <option value="wide">Wide establishing</option>
+          <option value="dolly">Slow dolly-in</option>
+          <option value="orbit">Orbit</option>
+          <option value="handheld">Handheld</option>
+        </select></label>
+        <label class="fld"><span>Subject / scene</span><input type="text" id="bsSubject" placeholder="e.g. the owner opening the shop at sunrise" autocomplete="off"></label>
+        <label class="fld"><span>Mood</span><select id="bsMood">
+          <option value="Golden hour warmth">Golden hour</option>
+          <option value="Clean bright daylight">Clean daylight</option>
+          <option value="Moody low-key shadows">Moody low-key</option>
+          <option value="Neon night glow">Neon night</option>
+        </select></label>
+        <p class="tool-status" id="bsStatus" role="status">Your prompt updates live as you turn the dials.</p>
+      </div>
+      <div>
+        <figure style="margin-bottom:16px">
+          <img class="sec-visual" src="assets/studio-camera.svg" alt="The Brand Studio: a cinema camera beside focal length, aperture, and shot-type controls" loading="lazy">
+          <figcaption>Camera, lens, focal length, aperture — set like a director, written out as a prompt.</figcaption>
+        </figure>
+        <h3 class="cond" style="font-size:19px;margin-bottom:6px">Your shot prompt</h3>
+        <div class="bs-out" id="bsPrompt"></div>
+        <h3 class="cond" style="font-size:19px;margin-bottom:6px">3-shot plan</h3>
+        <ol class="bs-plan" id="bsPlan"></ol>
+        <button type="button" class="btn small" id="bsCopy">Copy the Prompt</button>
+        <p class="honest">Builds your shot prompt — run it in any AI video tool. Flow-style tools, Runway, Kling, Pika and the rest all take a prompt like this one; paste it in and generate there.</p>
+      </div>
+    </div>
+    <p style="margin-top:18px"><a class="xp-link" href="brand-studio.html">Open the Brand Studio on its own page →</a></p>
+  </div>
+</section>
+
+<!-- EIN -->
+<section class="block rv" id="ein" data-section="ein" data-visual="assets/ein-card.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">12</span><h2 class="cond">Get Your EIN — Free From the IRS</h2></div>
+    <p class="sdesc">Step 4 of the path. Once the company exists, it needs its own federal tax ID. This is the step owners most often overpay for — so here it is plainly.</p>
+    <div class="split">
+      <div>
+        <ul class="feat">
+          <li><b>What it is</b> — your company's federal tax ID: the number the business uses for taxes, so the business stands on its own paperwork.</li>
+          <li><b>What it unlocks</b> — a business bank account in the company's name, hiring employees, and filing business taxes.</li>
+          <li><b>When you get it</b> — right after formation. Form the company with the state first, then apply — the IRS expects the entity to already exist.</li>
+          <li><b>What it costs</b> — nothing. An EIN is free from the IRS, you apply once, and you never pay a third-party site for the number itself.</li>
+        </ul>
+        <a class="btn amber" href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online">Apply Free at IRS.gov</a>
+        <p class="st-note">The IRS's own page says it plainly: beware of websites that charge for an EIN — you never have to pay a fee for one.</p>
+      </div>
+      <figure>
+        <img class="sec-visual" src="assets/ein-card.svg" alt="An EIN card — the federal tax ID card for a business, stamped FREE from the IRS" loading="lazy">
+        <figcaption>The EIN: your company's federal tax ID, issued free by the IRS.</figcaption>
       </figure>
     </div>
   </div>
@@ -311,10 +525,39 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- FUNDING -->
+<section class="block rv" id="funding" data-section="funding" data-visual="assets/funding-coins.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">04</span><h2 class="cond">Fund Your Business</h2><span class="tag">Add this next</span></div>
+    <p class="sdesc">Your company is formed and your Startup Kit is in hand — the next move is funding it. Through LoanableUSA, a formed company can apply for business credit lines and card-stacking programs of up to $250,000 if you qualify, or for real estate funding for property deals.</p>
+    <figure class="vidfig">
+      <video class="process-video" src="assets/funding-video.mp4" poster="assets/funding-poster.jpg" controls preload="none" playsinline aria-label="Motion graphic: fund your business through LoanableUSA — company formed, Startup Kit in hand, then business funding of up to $250,000 if you qualify, through business credit lines or real estate funding"></video>
+      <figcaption>Formed, kitted, funded — the funding step, in eighteen seconds.</figcaption>
+    </figure>
+    <div class="split">
+      <div>
+        <ul class="feat">
+          <li><b>Business credit lines + card stacking</b> — apply through Loanable's syndicated line of credit program: credit lines and card stacking for the company you just formed.</li>
+          <li><b>Real estate funding</b> — a separate Loanable application for property purchases and investment deals.</li>
+          <li><b>Up to $250,000, if you qualify</b> — that number is a ceiling, not a promise: what you are offered, if anything, is decided by your application and eligibility.</li>
+        </ul>
+        <p style="margin-bottom:12px"><a class="btn" href="https://www.loanableusa.com/apply-syndicated-loc?ref=CPPPGK">Business Credit Lines — Apply</a></p>
+        <p><a class="btn amber" href="https://www.loanableusa.com/apply-v3?type=real_estate&ref=CPPPGK">Real Estate Funding — Apply</a></p>
+        <p class="st-note">Funding is through LoanableUSA. Approval and amounts depend on eligibility — no funding amount is promised.</p>
+      </div>
+      <figure>
+        <img class="sec-visual" src="assets/funding-coins.svg" alt="Fund your business: credit cards for business credit lines and card stacking, a stack of coins, and a house for real estate funding" loading="lazy">
+        <figcaption>Two funding doors through LoanableUSA: business credit lines and real estate funding.</figcaption>
+      </figure>
+    </div>
+    <p style="margin-top:18px"><a class="xp-link" href="funding.html">Open the Funding step on its own page →</a></p>
+  </div>
+</section>
+
 <!-- ALICE -->
 <section class="block rv" id="alice" data-section="alice" data-visual="assets/alice-ai-office.svg">
   <div class="wrap">
-    <div class="shead"><span class="snum">04</span><h2 class="cond">Add Alice — Your AI Office</h2><span class="tag">Add this next</span></div>
+    <div class="shead"><span class="snum">05</span><h2 class="cond">Add Alice — Your AI Office</h2><span class="tag">Add this next</span></div>
     <p class="sdesc">A new company has no front desk. Alice is the plugin that acts as one on your new website: she answers customer questions, quotes your services from your prices, and books jobs while you are out doing the work.</p>
     <div class="split">
       <div>
@@ -333,10 +576,57 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- WORKER DELEGATION -->
+<section class="block rv" id="delegate" data-section="delegate" data-visual="assets/delegate-board.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">13</span><h2 class="cond">Delegate the Work — Crew Dispatch Planner</h2></div>
+    <p class="sdesc">Step 7 of the path, next to Alice. When the jobs outgrow one pair of hands, you delegate. Build your crew roster, assign the job, and get a clean dispatch summary you can copy anywhere. Your roster and assignments save in this browser only.</p>
+    <figure style="margin-bottom:20px">
+      <img class="sec-visual" src="assets/delegate-board.svg" alt="The delegation planner: a crew roster of workers and trades on the left, a dispatch card assigning a job on the right" loading="lazy">
+      <figcaption>Roster on the left, dispatch on the right — who does what, in writing.</figcaption>
+    </figure>
+    <div class="split">
+      <div class="tool" id="delegateTool">
+        <h3 class="cond" style="font-size:18px;margin-bottom:10px">Your crew</h3>
+        <label class="fld"><span>Worker name</span><input type="text" id="dgWName" placeholder="e.g. Marcus" autocomplete="off"></label>
+        <label class="fld"><span>Trade</span><select id="dgWTrade">
+          <option>Plumbing</option>
+          <option>Electrical</option>
+          <option>HVAC</option>
+          <option>Carpentry</option>
+          <option>Painting</option>
+          <option>Landscaping</option>
+          <option>Moving</option>
+          <option>Cleaning</option>
+          <option>General labor</option>
+        </select></label>
+        <div class="btnrow"><button type="button" class="btn small" id="dgAddWorker">Add Worker</button></div>
+        <ul class="dg-list" id="dgRoster" style="margin-top:14px"></ul>
+        <h3 class="cond" style="font-size:18px;margin:16px 0 10px">Assign a job</h3>
+        <label class="fld"><span>Worker</span><select id="dgWorker"></select></label>
+        <label class="fld"><span>Job</span><input type="text" id="dgJob" placeholder="e.g. Swap the water heater, 14 Elm St" autocomplete="off"></label>
+        <label class="fld"><span>Fee split % (optional)</span><input type="number" id="dgFee" min="0" max="100" step="1" placeholder="e.g. 20"></label>
+        <div class="btnrow"><button type="button" class="btn small" id="dgAssign">Create Dispatch</button></div>
+        <p class="tool-status" id="dgStatus" role="status">Add a worker to your roster to start delegating.</p>
+      </div>
+      <div>
+        <h3 class="cond" style="font-size:19px;margin-bottom:10px">Dispatch summaries</h3>
+        <div id="dgCards"></div>
+        <p class="honest">This is a planning tool — your plan lives in this browser. Actual job dispatch to subs happens through Alice's Lead Inbox, and the full crew system is LOGIX COMMAND.</p>
+        <p style="margin-top:14px" class="btnrow">
+          <a class="btn small" href="https://aliceaihub.xyz">Run It With Alice</a>
+          <a class="btn small ghost" href="https://madisonshalom72.github.io/logix-command/">Open LOGIX COMMAND</a>
+        </p>
+      </div>
+    </div>
+    <p style="margin-top:18px"><a class="xp-link" href="delegation.html">Open the Delegation Planner on its own page →</a></p>
+  </div>
+</section>
+
 <!-- AFTER YOU FORM -->
 <section class="block rv" id="after" data-section="after" data-visual="assets/after-you-form.svg">
   <div class="wrap">
-    <div class="shead"><span class="snum">05</span><h2 class="cond">After You Form</h2></div>
+    <div class="shead"><span class="snum">06</span><h2 class="cond">After You Form</h2></div>
     <p class="sdesc">Forming the company is the starting line. These are the steps that come next — keep this checklist where you can see it for your first ninety days.</p>
     <div class="split">
       <figure>
@@ -363,7 +653,7 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="block rv" id="free" data-section="free" data-visual="assets/free-start.svg">
   <div class="wrap">
     <div class="freeband">
-      <div class="shead"><span class="snum">06</span><h2 class="cond">Not Ready Yet? Start Free</h2></div>
+      <div class="shead"><span class="snum">07</span><h2 class="cond">Not Ready Yet? Start Free</h2></div>
       <p class="sdesc" style="margin-bottom:0">No company required. Use the free tools to find the idea and learn the steps — then come back and form it when you are ready.</p>
       <figure style="margin-top:18px">
         <img class="sec-visual" src="assets/free-start.svg" alt="Start free: a business idea lightbulb for the free idea tool, and an open book for the free training courses" loading="lazy">
@@ -387,7 +677,7 @@ html.js .rv.in{opacity:1;transform:none}
 <!-- FAQ -->
 <section class="block rv" id="faq" data-section="faq" data-visual="assets/faq-entities.svg">
   <div class="wrap">
-    <div class="shead"><span class="snum">07</span><h2 class="cond">Questions, Answered Plainly</h2></div>
+    <div class="shead"><span class="snum">08</span><h2 class="cond">Questions, Answered Plainly</h2></div>
     <p class="sdesc">General, educational answers — not legal or tax advice. Your situation is yours; a CPA or attorney in your state has the final word on decisions like these.</p>
     <figure style="margin-bottom:20px">
       <img class="sec-visual" src="assets/faq-entities.svg" alt="FAQ visual: a question mark over a balance comparing an LLC on one side and a C-Corp on the other" loading="lazy">
@@ -415,6 +705,13 @@ html.js .rv.in{opacity:1;transform:none}
     </div>
 
     <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>What does it cost?</span><span class="chev">+</span></button>
+      <div class="faq-a" hidden>
+        <p>Formation is your state&rsquo;s filing fee + a $30 StartBusiness24 filing fee — you review the full price before anything is charged. Or take The Whole Package for $50: the formation service, your website, logo generation, and the tools and extras on this page. State filing fees are set by your state, not by us, and the tools on this page are free to use.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>Which state should I form in?</span><span class="chev">+</span></button>
       <div class="faq-a" hidden>
         <p>Delaware or Wyoming are the states shown in the formation flow. Delaware is the common choice for companies expecting outside investment; Wyoming is a popular, low-friction choice for many other businesses. Where you actually operate can create filing duties in that state too — check your situation before you choose.</p>
@@ -423,16 +720,70 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="block rv" id="pricing" data-section="pricing" data-visual="assets/price-tag.svg">
+  <div class="wrap">
+    <div class="shead"><span class="snum">14</span><h2 class="cond">Pricing — Plain and Up Front</h2></div>
+    <p class="sdesc">Two ways in. Form the company on its own, or take the whole package — formation, website, logo, and the tools — for one package price. You review the full price before anything is charged.</p>
+    <div class="split">
+      <figure>
+        <img class="sec-visual" src="assets/price-tag.svg" alt="Pricing tags: formation at state filing fee plus a $30 filing fee, and the whole package at $50" loading="lazy">
+        <figcaption>Plain prices, no surprises at checkout.</figcaption>
+      </figure>
+      <div>
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Company Formation</h3>
+            <p class="price-big">State fee + $30</p>
+            <p>Your state&rsquo;s filing fee <b style="color:var(--cream)">+ a $30 StartBusiness24 filing fee</b>. That is the whole math.</p>
+            <ul>
+              <li>LLC or C-Corp, Delaware or Wyoming</li>
+              <li>Minutes-long questionnaire</li>
+              <li>Full price reviewed before you are charged</li>
+            </ul>
+            <p style="margin-top:14px"><a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a></p>
+          </div>
+          <div class="price-card hot">
+            <h3>The Whole Package</h3>
+            <p class="price-big">$50</p>
+            <p>Everything, one package price:</p>
+            <ul>
+              <li>The formation service</li>
+              <li>Your website, built from your incorporation</li>
+              <li>Logo generation</li>
+              <li>The tools and extras on this page</li>
+            </ul>
+            <p style="margin-top:10px">Your state&rsquo;s filing fee is separate — it is set by the state, not by us.</p>
+            <p style="margin-top:14px"><a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a></p>
+          </div>
+          <div class="price-card">
+            <h3>The Tools</h3>
+            <p class="price-big">Free</p>
+            <p>Use them right here, no card, no account:</p>
+            <ul>
+              <li>Name Search Generator + trademark self-check</li>
+              <li>Brand Studio prompt builder</li>
+              <li>Worker Delegation planner</li>
+              <li>Funding education and the Academy courses</li>
+            </ul>
+          </div>
+        </div>
+        <p class="honest">The $30 and $50 figures are StartBusiness24&rsquo;s own service prices. State filing fees are set by your state and vary by state and entity type.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING -->
 <section class="block rv" id="closing" data-section="closing" data-visual="assets/value-stack.svg">
   <div class="wrap">
-    <div class="shead"><span class="snum">08</span><h2 class="cond">The Whole Stack, One Flow</h2></div>
+    <div class="shead"><span class="snum">09</span><h2 class="cond">The Whole Stack, One Flow</h2></div>
     <p class="sdesc">Everything on this page, in the order it happens:</p>
     <figure style="margin-bottom:20px">
       <img class="sec-visual" src="assets/value-stack.svg" alt="The value stack in five stacked layers: form your company, your website, startup kit, Alice AI office, free training" loading="lazy">
     </figure>
     <ol class="stacklist">
-      <li><b>One-Click Business Creation</b> — your C-Corp or LLC, formed through a minutes-long questionnaire, price reviewed before anything is charged.</li>
+      <li><b>One-Click Business Creation</b> — your C-Corp or LLC, formed through a minutes-long questionnaire: your state&rsquo;s filing fee + a $30 filing fee, or The Whole Package for $50 — reviewed before anything is charged.</li>
       <li><b>Your Website</b> — built from your incorporation, so the company can start right away.</li>
       <li><b>Business Startup Kit</b> — record book, share certificates, contracts, checklist, after-you-form guide, and seal.</li>
       <li><b>Alice AI Plugin</b> — your AI office: answers, quotes, and books jobs on your site.</li>
@@ -501,16 +852,38 @@ if (video && window.matchMedia && window.matchMedia("(prefers-reduced-motion: re
   video.removeAttribute("autoplay");
   if (video.pause) video.pause();
 }
+var ACADEMY_URL = "https://madisonshalom72.github.io/startbusiness24-academy/";
+var IRS_EIN_URL = "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online";
 var XP = {
-  "1": { seek: 0,    title: "Step 1 \u2014 Idea",
-         text: "Start with the business you are actually building \u2014 the questionnaire is built around your company, founders, and filing details. Tap a step to watch that part of the process." },
-  "2": { seek: 4.2,  title: "Step 2 \u2014 Form",
-         text: "Choose a C-Corp or LLC, in Delaware or Wyoming, and review the details and the total before anything is charged. Nothing files until you review it." },
-  "3": { seek: 13.2, title: "Step 3 \u2014 Launch",
-         text: "File through Whop, then build the rest of the stack below \u2014 website, kit, and your AI office \u2014 on top of a real company." }
+  "name":  { n: 1, seek: 0,    title: "Step 1 \u2014 Name",
+             text: "Every company starts as a name. Use the free Name Search Generator below to find name ideas from your trade and style \u2014 then run the trademark self-check and start the formation with the name you pick.",
+             link: "name-generator.html", linkText: "Open the Full Name Search Generator \u2192" },
+  "form":  { n: 2, seek: 4.2,  title: "Step 2 \u2014 Form",
+             text: "Choose a C-Corp or LLC, in Delaware or Wyoming, and review the details and the total before anything is charged. Nothing files until you review it.",
+             link: START_URL, linkText: "Start the Formation \u2192" },
+  "brand": { n: 3, seek: 13.2, title: "Step 3 \u2014 Brand",
+             text: "Logo and website are created from your incorporation \u2014 and in the Brand Studio below you direct your first video ad: camera, lens, and shot, written out as a ready-to-run prompt.",
+             link: "brand-studio.html", linkText: "Open the Full Brand Studio \u2192" },
+  "ein":   { n: 4, seek: 8.7,  title: "Step 4 \u2014 EIN",
+             text: "Right after formation, get the company's federal tax ID \u2014 free from the IRS, applied for once, and never paid for. It unlocks the business bank account, hiring, and business taxes.",
+             link: IRS_EIN_URL, linkText: "Apply Free at IRS.gov \u2192" },
+  "fund":  { n: 5, seek: 17.7, title: "Step 5 \u2014 Fund",
+             text: "Formed companies can apply for funding: business credit lines and card stacking, or real estate funding, through LoanableUSA \u2014 up to $250,000 if you qualify.",
+             link: "funding.html", linkText: "Open the Funding Page \u2192" },
+  "equip": { n: 6, seek: 17.7, title: "Step 6 \u2014 Equip",
+             text: "The Business Startup Kit: corporate record book, share certificates, contracts pack, startup checklist, the after-you-form guide, and your corporate seal.",
+             link: "#kit", linkText: "See the Startup Kit \u2193" },
+  "run":   { n: 7, seek: 17.7, title: "Step 7 \u2014 Run",
+             text: "Alice answers customers, quotes, and books jobs into your lead inbox \u2014 and when the work outgrows you, the delegation planner below assigns it to your crew.",
+             link: "delegation.html", linkText: "Open the Full Delegation Planner \u2192" },
+  "learn": { n: 8, seek: 22.2, title: "Step 8 \u2014 Learn",
+             text: "Free training the whole way: five Academy courses \u2014 forming, business taxes, business credit, first customers, and AI tools for owners \u2014 free, no company required.",
+             link: ACADEMY_URL, linkText: "Start Free Training \u2192" }
 };
 var xpTitle = doc.getElementById("xpTitle");
 var xpText = doc.getElementById("xpText");
+var xpProgress = doc.getElementById("xpProgress");
+var xpLink = doc.getElementById("xpLink");
 var xpBtns = doc.querySelectorAll(".xp-step");
 function seekVideo(t){
   if (!video) return;
@@ -538,8 +911,11 @@ xpBtns.forEach(function(btn){
       b.classList.toggle("is-on", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
     });
+    btn.classList.add("xp-seen");
     if (xpTitle) xpTitle.textContent = data.title;
     if (xpText) xpText.textContent = data.text;
+    if (xpProgress) xpProgress.textContent = "Step " + data.n + " of 8 \u2014 " + data.title.replace(/^Step \d+ \u2014 /, "");
+    if (xpLink) { xpLink.setAttribute("href", data.link); xpLink.textContent = data.linkText; }
     seekVideo(typeof data.seek === "number" ? data.seek : parseFloat(btn.getAttribute("data-seek")) || 0);
     if (videoWrap && videoWrap.scrollIntoView) {
       videoWrap.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -605,6 +981,350 @@ items.forEach(function(item){
   });
 });
 
+/* ===== shared tool helpers ===== */
+function escHtml(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+function copyText(text, statusEl){
+  function done(){ if (statusEl) statusEl.textContent = "Copied \u2014 paste it wherever you work."; }
+  function fail(){ if (statusEl) statusEl.textContent = "Copy did not go through \u2014 select the text and copy it manually."; }
+  if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+    var r;
+    try { r = navigator.clipboard.writeText(text); } catch (e) { fail(); return; }
+    if (r && r.then) r.then(done, fail); else done();
+  } else { fail(); }
+}
+
+/* ===== Name Search Generator ===== */
+var NG_STYLES = {
+  modern:  { pre: ["Apex","Nova","Vertex","Lumen","Arc","Pulse","North","Summit","Ember","Orbit","Flux","Prime"],
+             suf: ["Labs","Works","Co","Studio","Group","Ventures","Supply"] },
+  classic: { pre: ["Sterling","Hartford","Beacon","Atlas","Crown","Liberty","Union","Pioneer","Heritage","Granite"],
+             suf: ["& Sons","Brothers","Company","Associates","Enterprises","Trading Co"] },
+  local:   { pre: ["Main Street","Hometown","County Line","Neighborhood","Ridge","Valley"],
+             suf: ["Services","Solutions","Pros","Company","Group"] },
+  bold:    { pre: ["Iron","Titan","Blaze","Onyx","Storm","Forge","Rhino","Viper","Anvil","Havoc"],
+             suf: ["Industries","Crew","Force","Nation","Syndicate","Collective"] }
+};
+var ngSeed = 7;
+function ngCap(s){ s = String(s || "").replace(/\s+/g, " ").trim(); return s ? s.charAt(0).toUpperCase() + s.slice(1) : ""; }
+function ngTradeCore(keyword){
+  var k = ngCap(keyword).replace(/\s+(services|service|company|co|llc|inc|solutions|group)$/i, "");
+  return k.trim();
+}
+function ngGenerate(keyword, styleKey, town){
+  var style = NG_STYLES[styleKey] || NG_STYLES.modern;
+  var trade = ngTradeCore(keyword);
+  var townC = ngCap(town);
+  ngSeed = (ngSeed * 48271 + 12345) % 2147483647;
+  var offset = ngSeed % style.pre.length;
+  var pres = style.pre, sufs = style.suf;
+  var names = [], used = {};
+  function push(n){ n = String(n).replace(/\s+/g, " ").trim(); if (n && !used[n]) { used[n] = 1; names.push(n); } }
+  var i, p, s;
+  for (i = 0; i < pres.length && names.length < 12; i++) {
+    p = pres[(i + offset) % pres.length];
+    s = sufs[(i + Math.floor(i / 2) + offset) % sufs.length];
+    if (styleKey === "local" && townC && i % 2 === 0) push(townC + " " + (trade || "Trade") + " " + s);
+    else if (trade && i % 3 === 1) push(p + " " + trade + " " + s);
+    else if (trade && i % 3 === 2) push(trade + " " + s + " " + p);
+    else push(p + " " + (trade || "Trade") + " " + s);
+  }
+  for (i = 0; i < pres.length && names.length < 10; i++) {
+    push(pres[(i + offset + 3) % pres.length] + " " + sufs[(i + offset + 2) % sufs.length]);
+  }
+  if (townC && styleKey !== "local") push(townC + " " + pres[offset % pres.length] + " " + sufs[offset % sufs.length]);
+  return names.slice(0, 12);
+}
+var ngKeywordEl = doc.getElementById("ngKeyword");
+var ngStyleEl = doc.getElementById("ngStyle");
+var ngTownEl = doc.getElementById("ngTown");
+var ngGoEl = doc.getElementById("ngGo");
+var ngAgainEl = doc.getElementById("ngAgain");
+var ngStatusEl = doc.getElementById("ngStatus");
+var ngResultsEl = doc.getElementById("ngResults");
+var ngTabSelfEl = doc.getElementById("ngTabSelf");
+var ngTabSearchEl = doc.getElementById("ngTabSearch");
+var ngPanelSelfEl = doc.getElementById("ngPanelSelf");
+var ngPanelSearchEl = doc.getElementById("ngPanelSearch");
+var ngOwnEl = doc.getElementById("ngOwn");
+var ngOwnStartEl = doc.getElementById("ngOwnStart");
+var ngOwnCheckEl = doc.getElementById("ngOwnCheck");
+var ngOwnStatusEl = doc.getElementById("ngOwnStatus");
+var ngCheckEl = doc.getElementById("ngCheck");
+var ngCheckNameEl = doc.getElementById("ngCheckName");
+var ngCheckStatusEl = doc.getElementById("ngCheckStatus");
+var ngCopyNameEl = doc.getElementById("ngCopyName");
+var ngTakenEl = doc.getElementById("ngTaken");
+var ngRejected = [];
+var ngLastNames = [];
+var ngCurrentCheck = "";
+function ngIsRejected(n){ return ngRejected.indexOf(String(n).toLowerCase()) !== -1; }
+function ngGenerateFresh(keyword, styleKey, town){
+  var out = [], guard = 0;
+  while (out.length < 8 && guard < 6) {
+    guard++;
+    ngGenerate(keyword, styleKey, town).forEach(function(n){ if (!ngIsRejected(n)) out.push(n); });
+    var seen = {}, ded = [];
+    out.forEach(function(n){ if (!seen[n]) { seen[n] = 1; ded.push(n); } });
+    out = ded;
+  }
+  return out.slice(0, 12);
+}
+function ngShowMode(mode){
+  var self = mode !== "search";
+  if (ngPanelSelfEl) ngPanelSelfEl.hidden = !self;
+  if (ngPanelSearchEl) ngPanelSearchEl.hidden = self;
+  if (ngTabSelfEl) { ngTabSelfEl.classList.toggle("is-on", self); ngTabSelfEl.setAttribute("aria-pressed", self ? "true" : "false"); }
+  if (ngTabSearchEl) { ngTabSearchEl.classList.toggle("is-on", !self); ngTabSearchEl.setAttribute("aria-pressed", !self ? "true" : "false"); }
+}
+if (ngTabSelfEl) ngTabSelfEl.addEventListener("click", function(){ ngShowMode("self"); });
+if (ngTabSearchEl) ngTabSearchEl.addEventListener("click", function(){ ngShowMode("search"); });
+function ngSyncOwn(){
+  var v = ngOwnEl ? ngOwnEl.value.replace(/\s+/g, " ").trim() : "";
+  if (ngOwnStartEl) ngOwnStartEl.setAttribute("href", v ? START_URL + "?name=" + encodeURIComponent(v) : START_URL);
+  return v;
+}
+if (ngOwnEl) { ngOwnEl.addEventListener("input", ngSyncOwn); ngOwnEl.addEventListener("change", ngSyncOwn); }
+function ngShowCheck(name){
+  name = (name || "").replace(/\s+/g, " ").trim();
+  if (!name) {
+    if (ngOwnStatusEl) ngOwnStatusEl.textContent = "Type your name first \u2014 then run the check on it.";
+    return false;
+  }
+  ngCurrentCheck = name;
+  if (ngCheckNameEl) ngCheckNameEl.textContent = name;
+  if (ngCheckEl) ngCheckEl.hidden = false;
+  if (ngCheckStatusEl) ngCheckStatusEl.textContent = "Copy the name, open each official record below, and search it there \u2014 exact name, close spellings, and sound-alikes.";
+  return true;
+}
+if (ngOwnCheckEl) ngOwnCheckEl.addEventListener("click", function(){ ngShowCheck(ngSyncOwn()); });
+if (ngCopyNameEl) ngCopyNameEl.addEventListener("click", function(){ if (ngCurrentCheck) copyText(ngCurrentCheck, ngCheckStatusEl); });
+function ngRender(){
+  var names = ngGenerateFresh(ngKeywordEl ? ngKeywordEl.value : "",
+                              ngStyleEl ? ngStyleEl.value : "modern",
+                              ngTownEl ? ngTownEl.value : "");
+  ngLastNames = names;
+  var html = "";
+  names.forEach(function(n, i){
+    html += '<div class="ng-row"><span class="ng-name">' + escHtml(n) + '</span><span class="btnrow">' +
+      '<a class="btn small" href="' + START_URL + "?name=" + encodeURIComponent(n) + '">Start with this name</a>' +
+      '<button type="button" class="btn small ghost" data-ng-check="' + i + '">Check</button></span></div>';
+  });
+  if (ngResultsEl) ngResultsEl.innerHTML = html;
+  if (ngStatusEl) ngStatusEl.textContent = names.length + " fresh name ideas \u2014 Start files with one; Check runs the trademark self-check first.";
+  if (ngAgainEl) ngAgainEl.disabled = false;
+  return names;
+}
+if (ngGoEl) ngGoEl.addEventListener("click", ngRender);
+if (ngAgainEl) ngAgainEl.addEventListener("click", ngRender);
+if (ngResultsEl) ngResultsEl.addEventListener("click", function(ev){
+  var t = ev && ev.target;
+  while (t && t !== ngResultsEl) {
+    if (t.getAttribute && t.getAttribute("data-ng-check") !== null) {
+      ngShowCheck(ngLastNames[parseInt(t.getAttribute("data-ng-check"), 10)]);
+      return;
+    }
+    t = t.parentNode;
+  }
+});
+if (ngTakenEl) ngTakenEl.addEventListener("click", function(){
+  if (!ngCurrentCheck) return;
+  if (!ngIsRejected(ngCurrentCheck)) ngRejected.push(ngCurrentCheck.toLowerCase());
+  var gone = ngCurrentCheck;
+  ngCurrentCheck = "";
+  if (ngCheckEl) ngCheckEl.hidden = true;
+  ngShowMode("search");
+  ngRender();
+  if (ngStatusEl) ngStatusEl.textContent = "\u201C" + gone + "\u201D marked taken \u2014 it will not be offered again. Fresh ideas below; run the same check on the next pick.";
+});
+
+/* ===== Brand Studio — cinematic prompt builder ===== */
+var BS_SHOTS = {
+  closeup:  { line: "Tight close-up, camera locked off, the subject's face and hands filling the frame", label: "Close-up" },
+  wide:     { line: "Wide establishing shot, the whole scene in frame, camera steady", label: "Wide establishing" },
+  dolly:    { line: "Slow dolly-in, the camera gliding steadily toward the subject", label: "Slow dolly-in" },
+  orbit:    { line: "Slow orbit around the subject, the background sweeping past", label: "Orbit" },
+  handheld: { line: "Handheld with natural micro-movement, documentary energy", label: "Handheld" }
+};
+var bsCameraEl = doc.getElementById("bsCamera");
+var bsLensEl = doc.getElementById("bsLens");
+var bsFocalEl = doc.getElementById("bsFocal");
+var bsFocalValEl = doc.getElementById("bsFocalVal");
+var bsApertureEl = doc.getElementById("bsAperture");
+var bsShotEl = doc.getElementById("bsShot");
+var bsSubjectEl = doc.getElementById("bsSubject");
+var bsMoodEl = doc.getElementById("bsMood");
+var bsPromptEl = doc.getElementById("bsPrompt");
+var bsPlanEl = doc.getElementById("bsPlan");
+var bsCopyEl = doc.getElementById("bsCopy");
+var bsStatusEl = doc.getElementById("bsStatus");
+function bsSubject(){
+  var s = (bsSubjectEl ? bsSubjectEl.value : "").replace(/\s+/g, " ").trim();
+  return s || "the founder opening the new shop at sunrise";
+}
+function bsBuild(){
+  var camera = bsCameraEl ? bsCameraEl.value : "8K digital cinema camera";
+  var lens = bsLensEl ? bsLensEl.value : "anamorphic";
+  var focal = bsFocalEl ? bsFocalEl.value : "35";
+  var aperture = bsApertureEl ? bsApertureEl.value : "f/2.8";
+  var shotKey = bsShotEl ? bsShotEl.value : "closeup";
+  var mood = bsMoodEl ? bsMoodEl.value : "Golden hour warmth";
+  var shot = BS_SHOTS[shotKey] || BS_SHOTS.closeup;
+  return "Shot on a " + camera + " with a " + lens + " lens at " + focal + "mm, aperture " + aperture + ". " +
+    shot.line + ": " + bsSubject() + ". Lighting and mood: " + mood.toLowerCase() +
+    ". Photorealistic, natural texture, cinematic color, smooth 24fps motion, no text overlays, no watermarks.";
+}
+function bsRender(){
+  var prompt = bsBuild();
+  if (bsPromptEl) bsPromptEl.textContent = prompt;
+  var shotKey = bsShotEl ? bsShotEl.value : "closeup";
+  var shot = BS_SHOTS[shotKey] || BS_SHOTS.closeup;
+  var focal = bsFocalEl ? bsFocalEl.value : "35";
+  var aperture = bsApertureEl ? bsApertureEl.value : "f/2.8";
+  var mood = (bsMoodEl ? bsMoodEl.value : "Golden hour warmth").toLowerCase();
+  if (bsPlanEl) {
+    bsPlanEl.innerHTML =
+      "<li><b>Shot 1 \u2014 Set the scene:</b> " + escHtml(shot.label) + " \u2014 " + escHtml(bsSubject()) + " (" + escHtml(focal) + "mm, " + escHtml(aperture) + ").</li>" +
+      "<li><b>Shot 2 \u2014 The work:</b> move in on the hands and the product \u2014 same camera and lens, " + escHtml(mood) + " light.</li>" +
+      "<li><b>Shot 3 \u2014 The result:</b> the finished moment, storefront or logo in frame \u2014 the frame the ad ends on.</li>";
+  }
+  if (bsFocalValEl && bsFocalEl) bsFocalValEl.textContent = bsFocalEl.value + "mm";
+  return prompt;
+}
+[bsCameraEl, bsLensEl, bsFocalEl, bsApertureEl, bsShotEl, bsSubjectEl, bsMoodEl].forEach(function(el){
+  if (!el) return;
+  el.addEventListener("change", bsRender);
+  el.addEventListener("input", bsRender);
+});
+bsRender();
+if (bsCopyEl) bsCopyEl.addEventListener("click", function(){
+  copyText(bsPromptEl ? bsPromptEl.textContent : bsBuild(), bsStatusEl);
+});
+
+/* ===== Worker Delegation planner ===== */
+var DG_KEY = "sb24-delegate-v1";
+var dgStore = null;
+try { if (typeof localStorage !== "undefined") dgStore = localStorage; } catch (e) { dgStore = null; }
+var dgWorkers = [], dgCards = [];
+var dgWNameEl = doc.getElementById("dgWName");
+var dgWTradeEl = doc.getElementById("dgWTrade");
+var dgAddBtn = doc.getElementById("dgAddWorker");
+var dgRosterEl = doc.getElementById("dgRoster");
+var dgWorkerEl = doc.getElementById("dgWorker");
+var dgJobEl = doc.getElementById("dgJob");
+var dgFeeEl = doc.getElementById("dgFee");
+var dgAssignBtn = doc.getElementById("dgAssign");
+var dgCardsEl = doc.getElementById("dgCards");
+var dgStatusEl = doc.getElementById("dgStatus");
+function dgLoad(){
+  if (!dgStore) return;
+  try {
+    var raw = dgStore.getItem(DG_KEY);
+    if (!raw) return;
+    var d = JSON.parse(raw);
+    if (d && d.workers instanceof Array) dgWorkers = d.workers;
+    if (d && d.cards instanceof Array) dgCards = d.cards;
+  } catch (e) { /* corrupted storage: start clean */ }
+}
+function dgSave(){
+  if (!dgStore) return;
+  try { dgStore.setItem(DG_KEY, JSON.stringify({ workers: dgWorkers, cards: dgCards })); } catch (e) { /* storage full/blocked */ }
+}
+function dgRender(){
+  if (dgRosterEl) {
+    dgRosterEl.innerHTML = dgWorkers.length ? dgWorkers.map(function(w, i){
+      return '<li class="dg-worker"><span><b>' + escHtml(w.name) + '</b> \u00B7 ' + escHtml(w.trade) + '</span>' +
+        '<button type="button" class="mini-btn" data-dg-del="' + i + '">Remove</button></li>';
+    }).join("") : '<li class="dg-empty">No crew yet \u2014 add your first worker above.</li>';
+  }
+  if (dgWorkerEl) {
+    dgWorkerEl.innerHTML = dgWorkers.length ? dgWorkers.map(function(w, i){
+      return '<option value="' + i + '">' + escHtml(w.name) + " \u2014 " + escHtml(w.trade) + "</option>";
+    }).join("") : '<option value="">Add a worker first</option>';
+  }
+  if (dgCardsEl) {
+    dgCardsEl.innerHTML = dgCards.length ? dgCards.map(function(c, i){
+      return '<article class="dg-card"><h4 class="cond">Dispatch \u2014 ' + escHtml(c.name) + " (" + escHtml(c.trade) + ")</h4>" +
+        "<p><b>Job:</b> " + escHtml(c.job) + "</p>" +
+        (c.fee ? "<p><b>Fee split:</b> " + escHtml(c.fee) + "% to the worker</p>" : "") +
+        "<p><b>Status:</b> tracked in Alice's Lead Inbox</p>" +
+        '<p style="margin-top:9px"><button type="button" class="mini-btn" data-dg-copy="' + i + '">Copy summary</button> ' +
+        '<button type="button" class="mini-btn" data-dg-delcard="' + i + '">Remove</button></p></article>';
+    }).join("") : '<p class="dg-empty">No dispatches yet \u2014 assign a job and the summary lands here.</p>';
+  }
+  if (dgStatusEl) {
+    dgStatusEl.textContent = dgWorkers.length
+      ? dgWorkers.length + (dgWorkers.length === 1 ? " worker" : " workers") + " on the roster \u00B7 " +
+        dgCards.length + (dgCards.length === 1 ? " dispatch" : " dispatches") + " planned."
+      : "Add a worker to your roster to start delegating.";
+  }
+}
+function dgAddWorker(name, trade){
+  name = (name || "").replace(/\s+/g, " ").trim();
+  trade = (trade || "").replace(/\s+/g, " ").trim() || "General labor";
+  if (!name) return false;
+  dgWorkers.push({ name: name, trade: trade });
+  dgSave(); dgRender();
+  return true;
+}
+function dgRemoveWorker(i){
+  if (typeof i !== "number" || i < 0 || i >= dgWorkers.length) return false;
+  dgWorkers.splice(i, 1);
+  dgSave(); dgRender();
+  return true;
+}
+function dgCardText(card){
+  var lines = ["DISPATCH \u2014 " + card.name + " (" + card.trade + ")", "Job: " + card.job];
+  if (card.fee) lines.push("Fee split: " + card.fee + "% to the worker");
+  lines.push("Status: tracked in Alice's Lead Inbox");
+  return lines.join("\n");
+}
+function dgAssign(workerIdx, job, fee){
+  job = (job || "").replace(/\s+/g, " ").trim();
+  var w = (typeof workerIdx === "number") ? dgWorkers[workerIdx] : null;
+  if (!w || !job) return false;
+  var f = parseInt(fee, 10);
+  var card = { name: w.name, trade: w.trade, job: job,
+               fee: (isNaN(f) || f < 0 || f > 100) ? "" : String(f) };
+  dgCards.unshift(card);
+  dgSave(); dgRender();
+  return true;
+}
+function dgRemoveCard(i){
+  if (typeof i !== "number" || i < 0 || i >= dgCards.length) return false;
+  dgCards.splice(i, 1);
+  dgSave(); dgRender();
+  return true;
+}
+function dgContainerClick(container, attr, fn){
+  if (!container) return;
+  container.addEventListener("click", function(ev){
+    var t = ev && ev.target;
+    while (t && t !== container) {
+      if (t.getAttribute && t.getAttribute(attr) !== null) { fn(parseInt(t.getAttribute(attr), 10)); return; }
+      t = t.parentNode;
+    }
+  });
+}
+dgContainerClick(dgRosterEl, "data-dg-del", dgRemoveWorker);
+dgContainerClick(dgCardsEl, "data-dg-copy", function(i){ if (dgCards[i]) copyText(dgCardText(dgCards[i]), dgStatusEl); });
+dgContainerClick(dgCardsEl, "data-dg-delcard", dgRemoveCard);
+if (dgAddBtn) dgAddBtn.addEventListener("click", function(){
+  if (dgAddWorker(dgWNameEl ? dgWNameEl.value : "", dgWTradeEl ? dgWTradeEl.value : "")) {
+    if (dgWNameEl) dgWNameEl.value = "";
+  }
+});
+if (dgAssignBtn) dgAssignBtn.addEventListener("click", function(){
+  dgAssign(dgWorkerEl ? parseInt(dgWorkerEl.value, 10) : NaN,
+           dgJobEl ? dgJobEl.value : "",
+           dgFeeEl ? dgFeeEl.value : "");
+});
+dgLoad();
+dgRender();
+
 /* ===== primary CTA guard ===== */
 doc.querySelectorAll('[data-cta="primary"]').forEach(function(a){
   if (a.getAttribute("href") !== START_URL) a.setAttribute("href", START_URL);
@@ -613,12 +1333,29 @@ doc.querySelectorAll('[data-cta="primary"]').forEach(function(a){
 /* exposed for the harness test */
 window.SB24_MAIN = {
   START_URL: START_URL,
+  IRS_EIN_URL: IRS_EIN_URL,
   faqCount: items.length,
   xpSteps: xpBtns.length,
   statePanels: ["de", "wy"].filter(function(k){ return !!doc.getElementById("state-" + k); }).length,
   chkTotal: boxes.length,
   tickerItems: TICKER.length,
-  hasVideo: !!video
+  hasVideo: !!video,
+  namegen: {
+    generate: ngGenerate,
+    generateFresh: ngGenerateFresh,
+    showCheck: ngShowCheck,
+    rejected: function(){ return ngRejected.slice(); },
+    lastNames: function(){ return ngLastNames.slice(); }
+  },
+  studio: { buildPrompt: bsBuild },
+  delegate: {
+    addWorker: dgAddWorker,
+    assign: dgAssign,
+    removeWorker: dgRemoveWorker,
+    removeCard: dgRemoveCard,
+    cardText: dgCardText,
+    counts: function(){ return { workers: dgWorkers.length, cards: dgCards.length }; }
+  }
 };
 })();
 
