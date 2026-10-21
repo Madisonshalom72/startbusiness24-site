@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kit Document Generator — Print Certificates, Minutes &amp; Agreements | StartBusiness24</title>
+<meta name="description" content="Enter your company details once and generate print-ready membership or stock certificates, organizational minutes, and agreement signature pages — saved on your device, ready to print whenever you need them. The digital companion to the Business Startup Kit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0a08;--panel:#1e1813;--line:#33291f;--cream:#f4ecdc;--cream-dim:#cbbfa9;--mut:#9a8b74;
+--orange:#ff5a1f;--orange2:#ff8a3d;--amber:#e3bd85;--ink:#161210}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(12,10,8,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream);margin-right:auto}
+.bmark{width:34px;height:34px;background:var(--orange);color:var(--ink);display:flex;align-items:center;justify-content:center;
+font-weight:900;font-size:19px;font-family:'Oswald',sans-serif;box-shadow:0 0 20px rgba(255,90,31,.4)}
+.bname{font-size:19px;font-weight:700;letter-spacing:.05em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+.bname span{color:var(--orange)}
+nav.main{display:flex;gap:16px;flex-wrap:wrap}
+nav.main a{color:var(--cream-dim);text-decoration:none;font-size:14px;font-weight:600}
+nav.main a:hover,nav.main a[aria-current]{color:var(--orange2)}
+.btn{display:inline-block;background:var(--orange);color:var(--ink);border:2px solid var(--ink);cursor:pointer;
+font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14.5px;
+padding:12px 20px;text-decoration:none;box-shadow:3px 3px 0 #000}
+.btn.small{font-size:13px;padding:9px 14px;box-shadow:2px 2px 0 #000}
+.btn.amber{background:var(--amber)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--line);box-shadow:none}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+main{display:block}
+section.block{padding:52px 0 30px}
+.kick{color:var(--orange2);font-weight:800;letter-spacing:.2em;font-size:11.5px;text-transform:uppercase}
+h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(30px,5.6vw,46px);line-height:1.05;margin:10px 0 12px}
+h1 em{font-style:normal;color:var(--orange)}
+h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(21px,3.4vw,27px);line-height:1.12;margin:34px 0 10px}
+h2 em{font-style:normal;color:var(--orange)}
+.lede{color:var(--cream-dim);font-size:16.5px;max-width:700px}
+.body{color:var(--cream-dim);font-size:15.5px;max-width:760px;margin-bottom:12px}
+.body b{color:var(--cream)}
+.tool{border:1px solid var(--line);background:var(--panel);padding:22px;margin-top:26px;max-width:860px}
+.tool h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:18px;margin-bottom:14px}
+.tool h3 em{font-style:normal;color:var(--orange)}
+.fld{display:block;margin-bottom:14px}
+.fld span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.fld input,.fld select{width:100%;background:#100d0a;border:1px solid var(--line);
+color:var(--cream);font-family:'Inter',sans-serif;font-size:16px;padding:12px 13px;outline:none}
+.fld small{display:block;color:var(--mut);font-size:12.5px;margin-top:5px}
+.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 16px}
+.owner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 16px}
+@media (max-width:820px){.tool-grid,.owner-grid{grid-template-columns:1fr}}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 4px}
+.tool-status{color:var(--amber);font-size:14px;min-height:20px;margin-top:10px}
+.honest{margin-top:16px;color:var(--mut);font-size:13px;border-top:1px dashed var(--line);padding-top:12px;max-width:760px}
+.honest b{color:var(--cream-dim)}
+.store-note{margin-top:18px;border:1px solid var(--amber);background:rgba(227,189,133,.06);padding:16px 18px;max-width:860px}
+.store-note h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:16px;color:var(--amber);margin-bottom:6px}
+.store-note p{color:var(--cream-dim);font-size:14.5px;margin-bottom:8px}
+.store-note p b{color:var(--cream)}
+.kd-history{list-style:none;margin-top:8px}
+.kd-history li{border:1px solid var(--line);background:#100d0a;padding:9px 13px;margin-bottom:7px;color:var(--cream-dim);font-size:14px}
+.kd-history li b{color:var(--cream)}
+.feat{list-style:none;max-width:860px}
+.feat li{border:1px solid var(--line);background:var(--panel);padding:14px 16px;margin-bottom:10px;color:var(--cream-dim);font-size:15px}
+.feat li b{color:var(--cream)}
+.next{margin-top:30px;border:1px solid var(--line);background:var(--panel);padding:20px;max-width:760px}
+.next h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:17px;margin-bottom:8px}
+.next p{color:var(--cream-dim);font-size:14.5px;margin-bottom:12px}
+footer{border-top:1px solid var(--line);padding:26px 0 34px;margin-top:40px}
+footer .disc{color:var(--mut);font-size:12.5px;max-width:760px}
+footer .fbrand{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--cream-dim);font-size:13px}
+footer .fbrand span{color:var(--orange)}
+/* ---- the printable paper ---- */
+.kd-paper{background:#fdfbf5;color:#201c15;font-family:Georgia,'Times New Roman',serif;
+border:1px solid #cfc6ae;box-shadow:0 18px 50px rgba(0,0,0,.5);padding:46px 44px;margin-top:22px;max-width:860px}
+.kd-paper .doc-empty{color:#6b6252;font-family:'Inter',sans-serif;font-size:14.5px}
+.kd-doc + .kd-doc{margin-top:34px;border-top:2px dashed #b9ae94;padding-top:34px}
+.kd-doc .cert-frame{border:3px double #3a3427;padding:30px 30px 24px;text-align:center}
+.kd-doc h4{font-family:Georgia,'Times New Roman',serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+font-size:clamp(21px,3.6vw,28px);margin-bottom:4px;color:#201c15}
+.kd-doc .cert-no{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#5c5342}
+.kd-doc .doc-sub{font-style:italic;font-size:14.5px;color:#4c4536;margin-bottom:14px}
+.kd-doc .co-name{font-size:clamp(19px,3vw,24px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin:8px 0 2px}
+.kd-doc .co-line{font-size:14px;color:#4c4536;margin-bottom:16px}
+.kd-doc p{font-size:15px;line-height:1.65;margin-bottom:12px;text-align:left}
+.kd-doc .cert-frame p{text-align:center}
+.kd-doc .owner-name{font-size:19px;font-weight:700;border-bottom:1px solid #8a7f63;display:inline-block;padding:0 18px 2px;margin:4px 0}
+.kd-doc .stake{font-weight:700}
+.kd-doc .legend{font-size:12.5px;font-style:italic;color:#5c5342;margin-top:16px;text-align:left}
+.kd-doc .sealrow{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:26px;flex-wrap:wrap}
+.kd-doc .seal{width:104px;height:104px;border:2.5px solid #8a7f63;border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:.3em;color:#8a7f63;text-transform:uppercase;flex:none;padding-left:.3em}
+.kd-doc .sig{text-align:left;min-width:230px;flex:1}
+.kd-doc .sig .line{border-bottom:1.5px solid #3a3427;height:30px;margin-bottom:4px}
+.kd-doc .sig .cap{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5c5342}
+.kd-doc h5{font-family:Georgia,'Times New Roman',serif;font-size:17px;text-transform:uppercase;letter-spacing:.05em;margin:18px 0 8px}
+.kd-doc ol,.kd-doc ul{margin:0 0 12px 22px;font-size:15px;line-height:1.65}
+.kd-doc li{margin-bottom:7px}
+.kd-doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+.kd-doc th,.kd-doc td{border:1px solid #b9ae94;padding:8px 11px;text-align:left}
+.kd-doc th{background:#efe9d8;text-transform:uppercase;font-size:12.5px;letter-spacing:.08em}
+.kd-doc .docfoot{margin-top:26px;border-top:1px solid #b9ae94;padding-top:10px;font-size:11.5px;font-style:italic;color:#6b6252;font-family:'Inter',sans-serif}
+@media print{
+  body *{visibility:hidden}
+  #kdDoc, #kdDoc *{visibility:visible}
+  #kdDoc{position:absolute;left:0;top:0;width:100%;max-width:none;box-shadow:none;border:none;margin:0;padding:10px 6px}
+  @page{margin:18mm}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="StartBusiness24 hub">
+      <span class="bmark">S</span><span class="bname">STARTBUSINESS<span>24</span></span>
+    </a>
+    <nav class="main" aria-label="Tools">
+      <a href="index.html">Hub</a>
+      <a href="guides.html">Guides</a>
+      <a href="name-generator.html">Name Search</a>
+      <a href="brand-studio.html">Brand Studio</a>
+      <a href="funding.html">Funding</a>
+      <a href="delegation.html">Delegation</a>
+    </nav>
+    <a class="btn small" data-cta="primary" href="https://startbusiness24.whop.site/start">Start My Company</a>
+  </div>
+</header>
+
+<main>
+<section class="block">
+  <div class="wrap">
+    <p class="kick">■ StartBusiness24 Tool — Kit Documents</p>
+    <h1>Kit Document <em>Generator</em></h1>
+    <p class="lede">The digital companion to the Business Startup Kit. Enter your company details <b>once</b> and generate print-ready ownership certificates, organizational minutes, and agreement pages filled in with your information — then print or save them as a PDF whenever you need them.</p>
+
+    <div class="store-note">
+      <h3>Digital storage — on this device</h3>
+      <p>Your details and a history of every document you generate are <b>saved on this device</b>, in this browser, so the generator is filled in and ready the next time you come back. Nothing you type here is sent anywhere — this page works entirely on your device.</p>
+      <p>Your <b>StartBusiness24 portal vault</b> — cloud storage for your filed documents — arrives with your filing account. Until then, this device copy plus your printed kit is your record set.</p>
+      <p><b>Hard rule:</b> never enter a Social Security number or an EIN on this page. Company record documents never need one, and this tool never asks.</p>
+    </div>
+
+    <div class="tool" id="kdDetails">
+      <h3>Step 1 · <em>Your company details</em></h3>
+      <div class="tool-grid">
+        <label class="fld"><span>Business legal name</span><input id="kdBizName" type="text" autocomplete="organization" placeholder="e.g., Keystone Home Care LLC"></label>
+        <label class="fld"><span>Entity type</span><select id="kdEntity">
+          <option value="llc" selected>Limited Liability Company (LLC)</option>
+          <option value="ccorp">Corporation (C-Corp)</option>
+        </select></label>
+        <label class="fld"><span>State of formation</span><input id="kdState" type="text" placeholder="e.g., Pennsylvania"></label>
+        <label class="fld"><span>Formation date</span><input id="kdFormDate" type="text" placeholder="e.g., October 21, 2026"></label>
+        <label class="fld"><span>Principal address</span><input id="kdAddress" type="text" autocomplete="street-address" placeholder="Street, City, State ZIP"></label>
+        <label class="fld"><span>Registered agent / office</span><input id="kdAgent" type="text" placeholder="Name and street address on file with the state"></label>
+      </div>
+      <h3 style="margin-top:8px">Owners <em>— up to four</em></h3>
+      <p class="body" style="font-size:14px;margin-bottom:14px">List each owner once. <span id="kdStakeHint">Ownership stake: percent interest for an LLC (e.g., 100%).</span></p>
+      <div class="owner-grid">
+        <label class="fld"><span>Owner 1 — name</span><input id="kdOwner1Name" type="text" placeholder="Full legal name"></label>
+        <label class="fld"><span>Owner 1 — stake</span><input id="kdOwner1Stake" type="text" placeholder="100% or number of shares"></label>
+        <label class="fld"><span>Owner 2 — name</span><input id="kdOwner2Name" type="text" placeholder="Full legal name"></label>
+        <label class="fld"><span>Owner 2 — stake</span><input id="kdOwner2Stake" type="text" placeholder="Optional"></label>
+        <label class="fld"><span>Owner 3 — name</span><input id="kdOwner3Name" type="text" placeholder="Full legal name"></label>
+        <label class="fld"><span>Owner 3 — stake</span><input id="kdOwner3Stake" type="text" placeholder="Optional"></label>
+        <label class="fld"><span>Owner 4 — name</span><input id="kdOwner4Name" type="text" placeholder="Full legal name"></label>
+        <label class="fld"><span>Owner 4 — stake</span><input id="kdOwner4Stake" type="text" placeholder="Optional"></label>
+      </div>
+    </div>
+
+    <div class="tool" id="kdGenerator">
+      <h3>Step 2 · <em>Generate a document</em></h3>
+      <div class="tool-grid">
+        <label class="fld"><span>Document</span><select id="kdDocType">
+          <option value="certificate" selected>Ownership Certificate</option>
+          <option value="minutes">Organizational Meeting Minutes</option>
+          <option value="agreement">Agreement Pages (cover + signatures)</option>
+        </select><small>The certificate and agreement pages switch automatically between LLC and C-Corp wording.</small></label>
+        <label class="fld"><span>Certificate number</span><input id="kdCertNo" type="text" value="001"><small>Certificates only — each owner's certificate is numbered in sequence from here.</small></label>
+        <label class="fld"><span>Document date</span><input id="kdDocDate" type="text" placeholder="e.g., October 21, 2026"><small>Used on the minutes and signature pages. Leave blank to fall back to the formation date.</small></label>
+      </div>
+      <div class="btnrow">
+        <button class="btn" id="kdGenerate" type="button">Generate Document</button>
+        <button class="btn amber" id="kdPrint" type="button">Print / Save PDF</button>
+      </div>
+      <p class="tool-status" id="kdStatus" role="status"></p>
+      <p class="honest">These are <b>company record documents</b> — the paperwork a business keeps in its own record book. Generating one here does not file anything with any state, and no certificate from this page is issued or endorsed by a state. Keep the signed originals with your records.</p>
+    </div>
+
+    <div id="kdPreview">
+      <div class="kd-paper" id="kdDoc"><p class="doc-empty">Your document preview appears here. Fill in your company details above, pick a document, and tap <b>Generate Document</b>.</p></div>
+    </div>
+
+    <h2>Generated on <em>this device</em></h2>
+    <p class="body">Your document history, stored in this browser — regenerate or reprint any of them from the same details, any time.</p>
+    <div id="kdHistory"><p class="body" style="font-size:14.5px">No documents generated yet on this device.</p></div>
+
+    <h2>What's in the <em>full Kit</em></h2>
+    <ul class="feat">
+      <li><b>Corporate Record Book</b> — the binder-ready record set your company documents live in, including the templates behind this generator.</li>
+      <li><b>Membership &amp; Share Certificates</b> — printed certificate stock for LLC membership and C-Corp shares.</li>
+      <li><b>Contracts Pack</b> — the everyday agreements a new company signs, in editable form.</li>
+      <li><b>After You Form guide</b> — EIN, business taxes, and the first-year filing calendar, step by step.</li>
+      <li><b>Startup Checklist</b> — the first 30 days after formation, in order.</li>
+      <li><b>Corporate Seal artwork</b> — your company seal design, ready for a stamp or embosser.</li>
+    </ul>
+    <div class="btnrow">
+      <a class="btn" href="https://whop.com/private-money-rights-playbook/business-startup-kit">Get the Business Startup Kit →</a>
+      <a class="btn ghost" href="https://startbusiness24.whop.site/start">Form Your Business First →</a>
+    </div>
+
+    <div class="next">
+      <h3 class="cond">Keep going</h3>
+      <p>Formed already? The free guides cover the next steps owners hit — the EIN, what your state really charges, and checking a name before it goes on the truck.</p>
+      <div class="btnrow">
+        <a class="btn small ghost" href="guides.html">All StartBusiness24 Guides</a>
+        <a class="btn small ghost" href="business-ideas.html">Smart Business Ideas</a>
+        <a class="btn small ghost" href="ein-guide.html">EIN Guide — Free From the IRS</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disc">Educational only — not legal, tax, or investment advice. No income or results promised. Filing details and timing are set by your state. StartBusiness24 by Capital 7 Logistics.</p>
+    <p style="margin-top:10px"><span class="fbrand">STARTBUSINESS<span>24</span></span> · C Corp in Seconds · by Capital 7 Logistics</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+/* Kit Document Generator: details are entered once, kept in this browser
+ * (localStorage key sb24-kit-docs-v1), and rendered into print-ready company
+ * record documents. Everything runs on the device: the script makes no
+ * network calls of any kind and never asks for an SSN or EIN. */
+var KEY = "sb24-kit-docs-v1";
+var store = null;
+try { if (typeof localStorage !== "undefined") store = localStorage; } catch (e) { store = null; }
+var mem = { details: null, history: [] };
+
+function load() {
+  if (store) {
+    try {
+      var raw = store.getItem(KEY);
+      if (raw) { var p = JSON.parse(raw); if (p && typeof p === "object") return p; }
+    } catch (e) { /* fall through to memory copy */ }
+  }
+  return mem;
+}
+function save(state) {
+  mem = state;
+  if (store) { try { store.setItem(KEY, JSON.stringify(state)); } catch (e) { /* memory copy stands */ } }
+}
+function $(id) { return document.getElementById(id); }
+function esc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function setStatus(t) { var s = $("kdStatus"); if (s) s.textContent = t; }
+
+var TEXT_FIELDS = ["kdBizName", "kdState", "kdFormDate", "kdAddress", "kdAgent",
+  "kdCertNo", "kdDocDate",
+  "kdOwner1Name", "kdOwner1Stake", "kdOwner2Name", "kdOwner2Stake",
+  "kdOwner3Name", "kdOwner3Stake", "kdOwner4Name", "kdOwner4Stake"];
+
+function readDetails() {
+  var d = { entity: "llc", docType: "certificate", owners: [] };
+  var ent = $("kdEntity"); if (ent && ent.value) d.entity = ent.value;
+  var dt = $("kdDocType"); if (dt && dt.value) d.docType = dt.value;
+  TEXT_FIELDS.forEach(function(id) { var el = $(id); d[id] = el ? String(el.value || "") : ""; });
+  for (var i = 1; i <= 4; i++) {
+    var n = (d["kdOwner" + i + "Name"] || "").trim(), s = (d["kdOwner" + i + "Stake"] || "").trim();
+    if (n) d.owners.push({ name: n, stake: s });
+  }
+  return d;
+}
+function fillDetails(d) {
+  if (!d) return;
+  var ent = $("kdEntity"); if (ent && d.entity) ent.value = d.entity;
+  var dt = $("kdDocType"); if (dt && d.docType) dt.value = d.docType;
+  TEXT_FIELDS.forEach(function(id) { var el = $(id); if (el && d[id] != null) el.value = d[id]; });
+  stakeHint();
+}
+function stakeHint() {
+  var hint = $("kdStakeHint"), ent = $("kdEntity");
+  if (!hint) return;
+  var isCorp = ent && ent.value === "ccorp";
+  hint.textContent = isCorp
+    ? "Ownership stake: number of shares for a corporation (e.g., 100)."
+    : "Ownership stake: percent interest for an LLC (e.g., 100%).";
+}
+function ownersOrBlank(d) {
+  return d.owners.length ? d.owners : [{ name: "________________________", stake: "____________" }];
+}
+function docDateOf(d) { return (d.kdDocDate || "").trim() || (d.kdFormDate || "").trim() || "____________________"; }
+function certNoFor(d, i) {
+  var base = (d.kdCertNo || "").trim() || "001";
+  if (i === 0) return base;
+  var n = parseInt(base, 10);
+  if (isNaN(n)) return base + "-" + (i + 1);
+  var s = String(n + i);
+  while (s.length < base.length) s = "0" + s;
+  return s;
+}
+var DOCFOOT = '<p class="docfoot">Generated with StartBusiness24 Kit Document Generator — educational template; have your attorney review before relying on it.</p>';
+function sealRow(sigCap) {
+  return '<div class="sealrow"><div class="seal">Seal</div>' +
+    '<div class="sig"><div class="line"></div><div class="cap">' + sigCap + '</div></div></div>';
+}
+
+function certificateHTML(d) {
+  var isCorp = d.entity === "ccorp";
+  var co = esc(d.kdBizName.trim()), st = esc((d.kdState || "").trim() || "____________");
+  var out = "";
+  ownersOrBlank(d).forEach(function(o, i) {
+    var stakeLine = isCorp
+      ? 'is the registered owner of <span class="stake">' + esc(o.stake || "____________") + ' shares</span> of the capital stock of'
+      : 'is the owner of a <span class="stake">' + esc(o.stake || "____________") + ' membership interest</span> in';
+    var legend = isCorp
+      ? "The shares evidenced by this certificate are subject to the Bylaws of the Corporation and to applicable law. This certificate evidences ownership as recorded in the Corporation's stock records; it is not a state-issued document."
+      : "The membership interest evidenced by this certificate is subject to the Operating Agreement of the Company and to applicable law. This certificate evidences ownership as recorded in the Company's records; it is not a state-issued document.";
+    out += '<div class="kd-doc"><div class="cert-frame">' +
+      '<p class="cert-no">Certificate No. ' + esc(certNoFor(d, i)) + '</p>' +
+      '<h4>' + (isCorp ? "Stock Certificate" : "Membership Certificate") + '</h4>' +
+      '<p class="co-name">' + co + '</p>' +
+      '<p class="co-line">A ' + st + (isCorp ? " corporation" : " limited liability company") + '</p>' +
+      '<p>This certifies that</p>' +
+      '<p><span class="owner-name">' + esc(o.name) + '</span></p>' +
+      '<p>' + stakeLine + '</p>' +
+      '<p class="co-name" style="font-size:18px">' + co + '</p>' +
+      '<p class="doc-sub">organized under the laws of the State of ' + st +
+        ((d.kdFormDate || "").trim() ? ', formed ' + esc(d.kdFormDate.trim()) : '') + '.</p>' +
+      '<p class="legend">' + legend + '</p>' +
+      sealRow(isCorp ? "President / Secretary" : "Manager / Authorized Member") +
+      '</div>' + DOCFOOT + '</div>';
+  });
+  return out;
+}
+
+function minutesHTML(d) {
+  var isCorp = d.entity === "ccorp";
+  var co = esc(d.kdBizName.trim()), st = esc((d.kdState || "").trim() || "____________");
+  var body = isCorp ? "Board of Directors" : "Members";
+  var gov = isCorp ? "Bylaws" : "Operating Agreement";
+  var ownList = ownersOrBlank(d).map(function(o) {
+    return "<li>" + esc(o.name) + (o.stake ? " — " + esc(o.stake) + (isCorp ? " shares" : "") : "") + "</li>";
+  }).join("");
+  var res = [
+    "<b>Formation acknowledged.</b> The company was organized under the laws of the State of " + st +
+      ((d.kdFormDate || "").trim() ? " on " + esc(d.kdFormDate.trim()) : "") +
+      ". Its principal address is " + esc((d.kdAddress || "").trim() || "as recorded in the company records") +
+      ", and its registered agent / office on file is " + esc((d.kdAgent || "").trim() || "as recorded with the state") + ".",
+    "<b>Governing document adopted.</b> The " + gov + " of the company, in the form kept with the company records, is adopted as the governing document of the company.",
+    "<b>Officers and managers.</b> The persons named in the company records are appointed to the " +
+      (isCorp ? "offices" : "management roles") + " set opposite their names in the record book, to serve until their successors are chosen.",
+    "<b>Ownership recorded.</b> The ownership of the company is recorded in the company records as follows, and certificates may be issued evidencing it: <ul>" + ownList + "</ul>",
+    "<b>Banking and tax registration.</b> The " + (isCorp ? "officers" : "managers") +
+      " are authorized to open a business bank account in the company's name and to apply to the IRS for an Employer Identification Number for the company. No identification number is recorded in these minutes.",
+    "<b>Fiscal year.</b> The fiscal year of the company ends on December 31, unless changed by a later recorded action.",
+    "<b>Seal.</b> The seal design kept in the company record book is adopted as the company's seal."
+  ];
+  var items = res.map(function(r, i) { return "<li><b>RESOLVED " + (i + 1) + ".</b> " + r + "</li>"; }).join("");
+  return '<div class="kd-doc">' +
+    '<h4 style="text-align:center">Minutes of the Organizational Meeting</h4>' +
+    '<p class="doc-sub" style="text-align:center">of the ' + body + ' of</p>' +
+    '<p class="co-name" style="text-align:center">' + co + '</p>' +
+    '<p>The organizational meeting of the ' + body + ' of ' + co + ', a ' + st + ' ' +
+      (isCorp ? "corporation" : "limited liability company") + ', was held on ' + esc(docDateOf(d)) +
+      ' at the principal address of the company, after waiver of notice by all entitled to it.</p>' +
+    '<p><b>Present and acting:</b></p><ul>' + ownList + '</ul>' +
+    '<p>On motion duly made and carried, the following resolutions were adopted:</p>' +
+    '<ol style="list-style:none;margin-left:0">' + items + '</ol>' +
+    '<p>There being no further business, the meeting was adjourned. These minutes are filed in the company record book.</p>' +
+    sealRow(isCorp ? "Secretary" : "Recording Member") +
+    DOCFOOT + '</div>';
+}
+
+function agreementHTML(d) {
+  var isCorp = d.entity === "ccorp";
+  var co = esc(d.kdBizName.trim()), st = esc((d.kdState || "").trim() || "____________");
+  if (!isCorp) {
+    var rows = ownersOrBlank(d).map(function(o) {
+      return "<tr><td>" + esc(o.name) + "</td><td>" + esc(o.stake || "____________") + "</td></tr>";
+    }).join("");
+    var sigs = ownersOrBlank(d).map(function(o) {
+      return '<div class="sig" style="margin-top:22px"><div class="line"></div><div class="cap">Member — ' +
+        esc(o.name) + ' &nbsp;·&nbsp; Date: ____________</div></div>';
+    }).join("");
+    return '<div class="kd-doc">' +
+      '<h4 style="text-align:center">Operating Agreement</h4>' +
+      '<p class="doc-sub" style="text-align:center">Cover &amp; Signature Page</p>' +
+      '<p class="co-name" style="text-align:center">' + co + '</p>' +
+      '<p style="text-align:center">A ' + st + ' limited liability company' +
+        ((d.kdFormDate || "").trim() ? ', formed ' + esc(d.kdFormDate.trim()) : '') + '.</p>' +
+      '<p>This cover page belongs to the Operating Agreement of the Company, kept in full in the company record book. The members and their membership interests are:</p>' +
+      '<table><tr><th>Member</th><th>Membership Interest</th></tr>' + rows + '</table>' +
+      '<h5>Signature Page</h5>' +
+      '<p>By signing below, each member agrees to the Operating Agreement of ' + co + ' dated ' + esc(docDateOf(d)) +
+      ', including its rules for management, distributions, and transfer of interests.</p>' +
+      sigs + DOCFOOT + '</div>';
+  }
+  return '<div class="kd-doc">' +
+    '<h4 style="text-align:center">Certificate of Adoption of Bylaws</h4>' +
+    '<p class="co-name" style="text-align:center">' + co + '</p>' +
+    '<p style="text-align:center">A ' + st + ' corporation' +
+      ((d.kdFormDate || "").trim() ? ', incorporated ' + esc(d.kdFormDate.trim()) : '') + '.</p>' +
+    '<p>I, the undersigned Secretary of ' + co + ', certify that the Bylaws kept with the corporate records of the Corporation were duly adopted by the ' +
+    'Board of Directors at the organizational meeting held on ' + esc(docDateOf(d)) +
+    ', and that those Bylaws remain in full force as of the date below.</p>' +
+    '<p>The shareholders of record, as entered in the stock records, are:</p>' +
+    '<table><tr><th>Shareholder</th><th>Shares</th></tr>' +
+    ownersOrBlank(d).map(function(o) {
+      return "<tr><td>" + esc(o.name) + "</td><td>" + esc(o.stake || "____________") + "</td></tr>";
+    }).join("") + '</table>' +
+    '<div class="sig" style="margin-top:26px"><div class="line"></div><div class="cap">Secretary &nbsp;·&nbsp; Date: ____________</div></div>' +
+    '<div class="sig" style="margin-top:22px"><div class="line"></div><div class="cap">President &nbsp;·&nbsp; Date: ____________</div></div>' +
+    DOCFOOT + '</div>';
+}
+
+function docHTML(type, d) {
+  if (type === "minutes") return minutesHTML(d);
+  if (type === "agreement") return agreementHTML(d);
+  return certificateHTML(d);
+}
+function typeLabel(type, entity) {
+  if (type === "minutes") return "Organizational Meeting Minutes";
+  if (type === "agreement") return entity === "ccorp" ? "Bylaws Adoption Certificate" : "Operating Agreement Pages";
+  return entity === "ccorp" ? "Stock Certificate" : "Membership Certificate";
+}
+
+var generated = false;
+function renderHistory(state) {
+  var box = $("kdHistory");
+  if (!box) return;
+  var h = (state && state.history) || [];
+  if (!h.length) {
+    box.innerHTML = '<p class="body" style="font-size:14.5px">No documents generated yet on this device.</p>';
+    return;
+  }
+  box.innerHTML = '<ul class="kd-history">' + h.map(function(en) {
+    return "<li><b>" + esc(en.label || en.type) + "</b> — generated " + esc(en.at || "") + " on this device</li>";
+  }).join("") + "</ul>";
+}
+function persistDetails() {
+  var st = load();
+  st.details = readDetails();
+  save(st);
+  return st;
+}
+function render(record) {
+  var d = readDetails();
+  var type = d.docType || "certificate";
+  if (!d.kdBizName.trim()) {
+    setStatus("Add your business legal name first — every document is generated from your details.");
+    return null;
+  }
+  var html = docHTML(type, d);
+  $("kdDoc").innerHTML = html;
+  generated = true;
+  var st = load();
+  st.details = d;
+  if (record) {
+    st.history = st.history || [];
+    st.history.unshift({ type: type, label: typeLabel(type, d.entity),
+      at: new Date().toISOString().slice(0, 10) });
+    if (st.history.length > 30) st.history.length = 30;
+  }
+  save(st);
+  renderHistory(st);
+  setStatus(typeLabel(type, d.entity) + " generated for " + d.kdBizName.trim() +
+    " — saved on this device. Print or save it as a PDF any time.");
+  return html;
+}
+function printDoc() {
+  try { if (typeof window !== "undefined" && window.print) window.print(); } catch (e) { /* print is best-effort */ }
+  return true;
+}
+
+/* wire up */
+var ctas = document.querySelectorAll('[data-cta="primary"]');
+ctas.forEach(function(a) {
+  a.addEventListener("click", function(ev) {
+    var href = a.getAttribute("href");
+    if (!href || href === "#") { if (ev && ev.preventDefault) ev.preventDefault(); }
+  });
+});
+var genBtn = $("kdGenerate");
+if (genBtn) genBtn.addEventListener("click", function() { render(true); });
+var prnBtn = $("kdPrint");
+if (prnBtn) prnBtn.addEventListener("click", function() {
+  if (!generated) render(true);
+  printDoc();
+});
+TEXT_FIELDS.concat(["kdEntity", "kdDocType"]).forEach(function(id) {
+  var el = $(id);
+  if (!el) return;
+  var onEdit = function() {
+    if (id === "kdEntity") stakeHint();
+    persistDetails();
+    if (generated) render(false);
+  };
+  el.addEventListener("input", onEdit);
+  el.addEventListener("change", onEdit);
+});
+var saved = load();
+if (saved.details) {
+  fillDetails(saved.details);
+  if ((saved.details.kdBizName || "").trim()) {
+    render(false);
+    setStatus("Your saved details were restored from this device — the preview is regenerated and ready to print.");
+  }
+}
+renderHistory(saved);
+
+window.SB24_KITDOCS = {
+  STORAGE_KEY: KEY,
+  generate: function() { return render(true); },
+  render: function() { return render(false); },
+  printDoc: printDoc,
+  docHTML: docHTML,
+  details: readDetails,
+  history: function() { return (load().history || []).slice(); },
+  ctaCount: ctas.length
+};
+})();
+</script>
+</body>
+</html>
