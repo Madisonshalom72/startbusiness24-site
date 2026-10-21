@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Worker delegation board: a crew roster on the left, a dispatch card on the right">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="55" y="80" width="320" height="330" fill="#1e1813" stroke="#33291f" stroke-width="2"/>
+<text x="80" y="126" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#ff8a3d" letter-spacing="2">CREW ROSTER</text>
+<circle cx="105" cy="180" r="21" fill="none" stroke="#f4ecdc" stroke-width="3"/>
+<text x="140" y="174" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">WORKER M</text>
+<text x="140" y="200" font-family="Arial,sans-serif" font-size="16" fill="#9a8b74">PLUMBING</text>
+<circle cx="105" cy="258" r="21" fill="none" stroke="#f4ecdc" stroke-width="3"/>
+<text x="140" y="252" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">WORKER J</text>
+<text x="140" y="278" font-family="Arial,sans-serif" font-size="16" fill="#9a8b74">ELECTRICAL</text>
+<circle cx="105" cy="336" r="21" fill="none" stroke="#f4ecdc" stroke-width="3"/>
+<text x="140" y="330" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">WORKER R</text>
+<text x="140" y="356" font-family="Arial,sans-serif" font-size="16" fill="#9a8b74">CARPENTRY</text>
+<path d="M392 245 h56" stroke="#ff5a1f" stroke-width="5"/>
+<path d="M448 245 l-16 -11 v22 z" fill="#ff5a1f"/>
+<rect x="465" y="115" width="285" height="260" rx="14" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<text x="490" y="162" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#f4ecdc" letter-spacing="2">DISPATCH</text>
+<text x="490" y="212" font-family="Arial,sans-serif" font-size="18" fill="#f4ecdc">WHO &#8212; M &#183; PLUMBING</text>
+<text x="490" y="250" font-family="Arial,sans-serif" font-size="18" fill="#f4ecdc">JOB &#8212; WATER HEATER SWAP</text>
+<text x="490" y="288" font-family="Arial,sans-serif" font-size="18" fill="#f4ecdc">STATUS &#8212; LEAD INBOX</text>
+<circle cx="520" cy="332" r="16" fill="none" stroke="#ff5a1f" stroke-width="4"/>
+<path d="M512 332 l6 6 l12 -13" stroke="#ff5a1f" stroke-width="4" fill="none"/>
+<text x="548" y="339" font-family="Arial,sans-serif" font-size="17" fill="#9a8b74">ASSIGNED</text>
+<text x="400" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" letter-spacing="3" fill="#ff8a3d">ASSIGN THE JOB. EVERYONE KNOWS THEIR PART.</text>
+</svg>

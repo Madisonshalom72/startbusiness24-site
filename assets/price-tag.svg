@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#161210"/>
+  <rect x="30" y="30" width="740" height="460" fill="#1e1813" stroke="#33291f" stroke-width="2"/>
+  <!-- small tag: formation -->
+  <g transform="rotate(-6 240 210)">
+    <path d="M120 130 h180 l70 70 v110 a14 14 0 0 1 -14 14 h-236 a14 14 0 0 1 -14 -14 v-166 a14 14 0 0 1 14 -14 z" fill="#241b13" stroke="#ff5a1f" stroke-width="3"/>
+    <circle cx="152" cy="168" r="13" fill="none" stroke="#e3bd85" stroke-width="4"/>
+    <text x="140" y="238" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#f4ecdc">FORMATION</text>
+    <text x="140" y="282" font-family="Arial, sans-serif" font-size="25" fill="#e3bd85">State fee + $30</text>
+    <text x="140" y="312" font-family="Arial, sans-serif" font-size="19" fill="#9a8b74">filing fee</text>
+  </g>
+  <!-- big tag: whole package -->
+  <g transform="rotate(4 560 260)">
+    <path d="M420 110 h210 l84 84 v150 a16 16 0 0 1 -16 16 h-278 a16 16 0 0 1 -16 -16 v-218 a16 16 0 0 1 16 -16 z" fill="#2a1c10" stroke="#ff5a1f" stroke-width="4"/>
+    <circle cx="462" cy="152" r="15" fill="none" stroke="#e3bd85" stroke-width="4"/>
+    <text x="452" y="238" font-family="Arial, sans-serif" font-size="27" font-weight="bold" fill="#f4ecdc">THE WHOLE</text>
+    <text x="452" y="272" font-family="Arial, sans-serif" font-size="27" font-weight="bold" fill="#f4ecdc">PACKAGE</text>
+    <text x="452" y="338" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ff5a1f">$50</text>
+  </g>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#9a8b74">Plain prices — reviewed before anything is charged</text>
+  <text x="400" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ff5a1f">PRICING</text>
+</svg>

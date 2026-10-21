@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Brand Studio: a cinema camera beside focal length, aperture, and shot controls">
+<rect width="800" height="520" fill="#161210"/>
+<path d="M52 108 v-40 h40 M708 68 h40 v40 M748 412 v40 h-40 M92 452 h-40 v-40" fill="none" stroke="#e3bd85" stroke-width="4"/>
+<rect x="185" y="112" width="95" height="34" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<rect x="85" y="146" width="310" height="200" rx="14" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<circle cx="240" cy="246" r="64" fill="none" stroke="#f4ecdc" stroke-width="4"/>
+<circle cx="240" cy="246" r="35" fill="none" stroke="#ff8a3d" stroke-width="4"/>
+<circle cx="240" cy="246" r="9" fill="#ff5a1f"/>
+<text x="240" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#9a8b74" letter-spacing="3">CINEMA CAMERA</text>
+<text x="440" y="140" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">FOCAL &#183; 35MM</text>
+<path d="M440 160 h270" stroke="#33291f" stroke-width="7"/>
+<circle cx="545" cy="160" r="11" fill="#ff5a1f"/>
+<text x="440" y="215" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">APERTURE &#183; f/2.8</text>
+<path d="M440 235 h270" stroke="#33291f" stroke-width="7"/>
+<circle cx="492" cy="235" r="11" fill="#ff5a1f"/>
+<text x="440" y="290" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">SHOT &#183; DOLLY IN</text>
+<path d="M440 310 h270" stroke="#33291f" stroke-width="7"/>
+<circle cx="618" cy="310" r="11" fill="#ff5a1f"/>
+<text x="440" y="368" font-family="Arial,sans-serif" font-size="19" fill="#9a8b74">LENS &#183; ANAMORPHIC</text>
+<text x="400" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" letter-spacing="3" fill="#ff8a3d">CINEMA CONTROLS &#8594; A READY-TO-RUN PROMPT</text>
+</svg>

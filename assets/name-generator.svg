@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Business name generator: a name tag with a new company name, beside more name idea chips">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="90" y="105" width="440" height="290" rx="22" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<circle cx="140" cy="150" r="13" fill="none" stroke="#e3bd85" stroke-width="4"/>
+<text x="310" y="185" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#9a8b74" letter-spacing="4">HELLO, MY NAME IS</text>
+<text x="310" y="262" text-anchor="middle" font-family="Arial,sans-serif" font-size="37" font-weight="bold" fill="#f4ecdc">SUMMIT RIDGE</text>
+<text x="310" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ff8a3d" letter-spacing="6">L L C</text>
+<path d="M150 345 h320" stroke="#33291f" stroke-width="3"/>
+<text x="310" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#9a8b74">YOUR NEW COMPANY NAME</text>
+<rect x="565" y="115" width="180" height="56" rx="12" fill="#1e1813" stroke="#33291f" stroke-width="2"/>
+<text x="585" y="151" font-family="Arial,sans-serif" font-size="20" fill="#f4ecdc">APEX &#10022;</text>
+<rect x="565" y="190" width="180" height="56" rx="12" fill="#1e1813" stroke="#33291f" stroke-width="2"/>
+<text x="585" y="226" font-family="Arial,sans-serif" font-size="20" fill="#f4ecdc">NORTHLINE &#10022;</text>
+<rect x="565" y="265" width="180" height="56" rx="12" fill="#1e1813" stroke="#ff5a1f" stroke-width="2"/>
+<text x="585" y="301" font-family="Arial,sans-serif" font-size="20" fill="#ff8a3d">BRIGHT &#10022;</text>
+<rect x="565" y="340" width="180" height="56" rx="12" fill="#1e1813" stroke="#33291f" stroke-width="2"/>
+<text x="585" y="376" font-family="Arial,sans-serif" font-size="20" fill="#f4ecdc">SUMMIT &#10022;</text>
+<text x="400" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" letter-spacing="3" fill="#ff8a3d">PICK A NAME WORTH FILING</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="An EIN card: the federal tax ID card for a business, marked free from the IRS">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="105" y="80" width="590" height="310" rx="18" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<path d="M105 168 h590" stroke="#ff5a1f" stroke-width="3"/>
+<text x="400" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f4ecdc" letter-spacing="2">EMPLOYER IDENTIFICATION NUMBER</text>
+<text x="150" y="290" font-family="Arial,sans-serif" font-size="76" font-weight="bold" fill="#ff5a1f">EIN</text>
+<text x="330" y="278" font-family="Arial,sans-serif" font-size="42" fill="#f4ecdc" letter-spacing="4">XX-XXXXXXX</text>
+<text x="330" y="322" font-family="Arial,sans-serif" font-size="18" fill="#9a8b74">THE NUMBER FORMAT, ON YOUR IRS LETTER</text>
+<text x="150" y="362" font-family="Arial,sans-serif" font-size="19" fill="#9a8b74">FOR BANKING &#183; TAXES &#183; HIRING</text>
+<circle cx="668" cy="428" r="42" fill="none" stroke="#e3bd85" stroke-width="5"/>
+<text x="668" y="437" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e3bd85">FREE</text>
+<text x="360" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" letter-spacing="3" fill="#ff8a3d">GET YOUR EIN FREE AT IRS.GOV</text>
+</svg>
