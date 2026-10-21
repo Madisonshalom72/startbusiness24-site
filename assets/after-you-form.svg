@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="After you form checklist beside a tax calendar">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="70" y="60" width="330" height="400" fill="#f4ecdc"/>
+<rect x="70" y="60" width="330" height="56" fill="#ff5a1f"/>
+<text x="235" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#0c0a08">AFTER YOU FORM</text>
+<g font-family="Arial,sans-serif" font-size="22" fill="#0c0a08">
+<text x="130" y="165">Get your EIN</text><text x="130" y="225">Business bank account</text>
+<text x="130" y="285">Taxes calendar</text><text x="130" y="345">Corporate records</text>
+<text x="130" y="405">Yearly compliance</text></g>
+<g stroke="#ff5a1f" stroke-width="5" fill="none"><path d="M88 148 l10 10 l18 -20 M88 208 l10 10 l18 -20 M88 268 l10 10 l18 -20 M88 328 l10 10 l18 -20 M88 388 l10 10 l18 -20"/></g>
+<rect x="460" y="95" width="270" height="260" fill="#1e1813" stroke="#f4ecdc" stroke-width="4"/>
+<rect x="460" y="95" width="270" height="50" fill="#ff5a1f"/>
+<text x="595" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#0c0a08">TAX CALENDAR</text>
+<g fill="#9a8b74"><rect x="485" y="170" width="55" height="42"/><rect x="568" y="170" width="55" height="42"/><rect x="651" y="170" width="55" height="42"/><rect x="485" y="232" width="55" height="42"/><rect x="568" y="232" width="55" height="42" fill="#ff5a1f"/><rect x="651" y="232" width="55" height="42"/><rect x="485" y="294" width="55" height="42"/><rect x="568" y="294" width="55" height="42"/><rect x="651" y="294" width="55" height="42"/></g>
+<text x="400" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="3" fill="#ff8a3d">EIN · BANK · TAXES · RECORDS · COMPLIANCE</text>
+</svg>

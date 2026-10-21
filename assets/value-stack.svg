@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="The value stack: five stacked layers from formation to training">
+<rect width="800" height="520" fill="#161210"/>
+<g font-family="Arial,sans-serif" font-size="24" font-weight="bold">
+<rect x="190" y="55" width="420" height="66" fill="#ff5a1f"/><text x="400" y="97" text-anchor="middle" fill="#0c0a08">1 · FORM YOUR COMPANY</text>
+<rect x="205" y="133" width="390" height="66" fill="#1e1813" stroke="#ff8a3d" stroke-width="3"/><text x="400" y="175" text-anchor="middle" fill="#f4ecdc">2 · YOUR WEBSITE</text>
+<rect x="220" y="211" width="360" height="66" fill="#1e1813" stroke="#f4ecdc" stroke-width="3"/><text x="400" y="253" text-anchor="middle" fill="#f4ecdc">3 · STARTUP KIT</text>
+<rect x="235" y="289" width="330" height="66" fill="#1e1813" stroke="#e3bd85" stroke-width="3"/><text x="400" y="331" text-anchor="middle" fill="#f4ecdc">4 · ALICE AI OFFICE</text>
+<rect x="250" y="367" width="300" height="66" fill="#1e1813" stroke="#9a8b74" stroke-width="3"/><text x="400" y="409" text-anchor="middle" fill="#f4ecdc">5 · FREE TRAINING</text>
+</g>
+<text x="400" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="3" fill="#ff8a3d">THE WHOLE STACK · ONE FLOW</text>
+</svg>

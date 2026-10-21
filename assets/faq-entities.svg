@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="FAQ: a balance comparing LLC and C-Corp under a question mark">
+<rect width="800" height="520" fill="#161210"/>
+<circle cx="400" cy="92" r="44" fill="#ff5a1f"/>
+<text x="400" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#0c0a08">?</text>
+<path d="M400 150 v190 M250 340 h300" stroke="#f4ecdc" stroke-width="8"/>
+<path d="M190 195 h420" stroke="#f4ecdc" stroke-width="7"/>
+<path d="M190 195 l-52 92 h104 z M610 195 l-52 92 h104 z" fill="none" stroke="#ff8a3d" stroke-width="6"/>
+<path d="M190 195 v0 M610 195 v0" stroke="#ff8a3d" stroke-width="6"/>
+<rect x="105" y="370" width="170" height="66" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<rect x="525" y="370" width="170" height="66" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<text x="190" y="413" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#f4ecdc">LLC</text>
+<text x="610" y="413" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#f4ecdc">C-CORP</text>
+<text x="400" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="3" fill="#ff8a3d">QUESTIONS · ANSWERED IN PLAIN ENGLISH</text>
+</svg>

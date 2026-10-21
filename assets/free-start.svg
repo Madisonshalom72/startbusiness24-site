@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Free start: a business idea lightbulb tool and an open training book">
+<rect width="800" height="520" fill="#161210"/>
+<circle cx="215" cy="185" r="78" fill="none" stroke="#ff8a3d" stroke-width="8"/>
+<path d="M215 272 v30 M192 314 h46 M200 336 h30" stroke="#ff8a3d" stroke-width="8" fill="none"/>
+<path d="M215 70 v-28 M110 105 l-20 -22 M320 105 l20 -22 M92 185 H52 M378 185 h-40" stroke="#e3bd85" stroke-width="7"/>
+<text x="215" y="395" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#f4ecdc">FREE IDEA TOOL</text>
+<path d="M455 130 q70 -34 145 0 v250 q-75 -34 -145 0 z" fill="#1e1813" stroke="#ff5a1f" stroke-width="4"/>
+<path d="M600 130 q70 -34 145 0 v250 q-75 -34 -145 0 z" fill="#1e1813" stroke="#f4ecdc" stroke-width="4"/>
+<path d="M600 130 v250" stroke="#f4ecdc" stroke-width="3"/>
+<path d="M480 185 h95 M480 225 h95 M625 185 h95 M625 225 h95" stroke="#9a8b74" stroke-width="6"/>
+<text x="600" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#f4ecdc">FREE TRAINING</text>
+<text x="400" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" letter-spacing="3" fill="#ff8a3d">START FREE · NO COMPANY REQUIRED</text>
+</svg>

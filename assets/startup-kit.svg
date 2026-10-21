@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Corporate kit: record book binder, share certificate, and corporate seal stamp">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="70" y="80" width="200" height="360" fill="#1e1813" stroke="#ff5a1f" stroke-width="4"/>
+<rect x="96" y="80" width="22" height="360" fill="#ff5a1f"/>
+<text x="185" y="215" text-anchor="middle" font-family="Georgia,serif" font-size="27" fill="#f4ecdc">CORPORATE</text>
+<text x="185" y="252" text-anchor="middle" font-family="Georgia,serif" font-size="27" fill="#f4ecdc">RECORD</text>
+<text x="185" y="289" text-anchor="middle" font-family="Georgia,serif" font-size="27" fill="#f4ecdc">BOOK</text>
+<rect x="320" y="105" width="410" height="215" fill="#f4ecdc" stroke="#c28a45" stroke-width="5"/>
+<text x="525" y="168" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#0c0a08">SHARE CERTIFICATE</text>
+<path d="M360 205 h330 M360 240 h230" stroke="#9a8b74" stroke-width="6"/>
+<circle cx="655" cy="268" r="30" fill="none" stroke="#ff5a1f" stroke-width="5"/>
+<path d="M655 252 v32 M639 268 h32" stroke="#ff5a1f" stroke-width="5"/>
+<circle cx="610" cy="395" r="58" fill="none" stroke="#e3bd85" stroke-width="7"/>
+<circle cx="610" cy="395" r="40" fill="none" stroke="#e3bd85" stroke-width="3"/>
+<text x="610" y="405" text-anchor="middle" font-family="Georgia,serif" font-size="19" fill="#e3bd85">SEAL</text>
+<rect x="330" y="368" width="150" height="62" fill="#1e1813" stroke="#f4ecdc" stroke-width="3"/>
+<text x="405" y="407" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#f4ecdc">CONTRACTS</text>
+<text x="400" y="492" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="3" fill="#ff8a3d">RECORD BOOK · CERTIFICATES · SEAL</text>
+</svg>

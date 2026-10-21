@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="A company website on a laptop and phone, built from incorporation details">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="70" y="70" width="500" height="340" fill="#1e1813" stroke="#f4ecdc" stroke-width="4"/>
+<rect x="70" y="70" width="500" height="52" fill="#ff5a1f"/>
+<circle cx="102" cy="96" r="9" fill="#0c0a08"/><circle cx="136" cy="96" r="9" fill="#0c0a08"/><circle cx="170" cy="96" r="9" fill="#0c0a08"/>
+<text x="100" y="185" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#f4ecdc">YOUR COMPANY, INC.</text>
+<rect x="100" y="215" width="300" height="18" fill="#9a8b74"/><rect x="100" y="248" width="360" height="18" fill="#9a8b74"/>
+<rect x="100" y="300" width="150" height="52" fill="#ff5a1f"/>
+<text x="175" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#0c0a08">BOOK US</text>
+<rect x="600" y="150" width="140" height="290" rx="18" fill="#1e1813" stroke="#ff8a3d" stroke-width="4"/>
+<rect x="622" y="190" width="96" height="16" fill="#f4ecdc"/><rect x="622" y="222" width="96" height="12" fill="#9a8b74"/><rect x="622" y="246" width="96" height="12" fill="#9a8b74"/>
+<rect x="622" y="292" width="96" height="40" fill="#ff5a1f"/>
+<text x="400" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" letter-spacing="3" fill="#ff8a3d">WEBSITE · BUILT FROM YOUR INCORPORATION</text>
+</svg>
