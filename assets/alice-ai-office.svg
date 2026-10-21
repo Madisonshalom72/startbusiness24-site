@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Alice AI office: chat bubbles answering, quoting, and booking a job on a calendar">
+<rect width="800" height="520" fill="#161210"/>
+<rect x="60" y="70" width="430" height="110" rx="22" fill="#1e1813" stroke="#ff5a1f" stroke-width="3"/>
+<text x="92" y="118" font-family="Arial,sans-serif" font-size="24" fill="#f4ecdc">Hi — can I get a quote?</text>
+<text x="92" y="152" font-family="Arial,sans-serif" font-size="20" fill="#9a8b74">Customer · new message</text>
+<rect x="190" y="205" width="430" height="110" rx="22" fill="#ff5a1f"/>
+<text x="222" y="253" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#0c0a08">Alice: Here is your quote —</text>
+<text x="222" y="287" font-family="Arial,sans-serif" font-size="20" fill="#0c0a08">and I can book you in.</text>
+<rect x="60" y="350" width="300" height="120" fill="#1e1813" stroke="#f4ecdc" stroke-width="3"/>
+<path d="M60 390 h300" stroke="#f4ecdc" stroke-width="3"/>
+<text x="84" y="380" font-family="Arial,sans-serif" font-size="20" fill="#ff8a3d">BOOKED JOB</text>
+<path d="M96 430 l16 16 l30 -32 M180 430 l16 16 l30 -32 M264 430 l16 16 l30 -32" stroke="#ff5a1f" stroke-width="6" fill="none"/>
+<circle cx="680" cy="395" r="52" fill="none" stroke="#e3bd85" stroke-width="6"/>
+<path d="M680 358 v40 l28 18" stroke="#e3bd85" stroke-width="7" fill="none"/>
+<text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="3" fill="#ff8a3d">ANSWERS · QUOTES · BOOKS JOBS</text>
+</svg>
