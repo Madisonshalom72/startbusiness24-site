@@ -122,6 +122,12 @@ html.js .rv.in{opacity:1;transform:none}
 /* process video */
 .vidfig{margin:4px 0 20px}
 .process-video{width:100%;display:block;border:1px solid var(--line);border-radius:var(--radius);background:#000;aspect-ratio:16/9;box-shadow:0 0 44px rgba(255,90,31,.16)}
+.soundfig{margin:0 0 22px;padding:18px;background:linear-gradient(180deg, rgba(34,27,20,.97), rgba(22,18,16,.97));border:1px solid var(--orange);border-radius:var(--radius);box-shadow:0 0 34px rgba(255,90,31,.14)}
+.sound-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.sound-badge{background:var(--orange);color:var(--ink);font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.06em;font-size:13px;padding:5px 9px;border-radius:4px}
+.sound-head h3{font-size:24px;margin:0}
+.soundfig p{color:var(--cream-dim);margin:0 0 14px;max-width:720px}
+.soundfig figcaption{color:var(--mut);font-size:13px;margin-top:10px}
 /* step explorer */
 .xp{margin:0 0 22px}
 .xp-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
@@ -292,6 +298,12 @@ footer .flinks a{color:var(--amber);font-weight:700;text-decoration:none;text-tr
     <figure class="vidfig" id="videoWrap">
       <video id="sb24Video" class="process-video" src="assets/process-video.mp4" poster="assets/process-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Motion graphic: the StartBusiness24 process — your idea, a few questions, your LLC or C-Corp filed, website and logo generated, the Startup Kit and Alice AI office, then launch"></video>
       <figcaption>Watch the whole process — from idea to launch, in under thirty seconds.</figcaption>
+    </figure>
+    <figure class="soundfig" aria-labelledby="soundVideoTitle">
+      <div class="sound-head"><span class="sound-badge">🔊 NARRATED</span><h3 class="cond" id="soundVideoTitle">Watch With Sound</h3></div>
+      <p>Tap play to hear the full process, explained step by step in a human-like voice.</p>
+      <video id="sb24SoundVideo" class="process-video sound-video" src="assets/process-video.mp4" poster="assets/process-poster.jpg" controls preload="none" playsinline aria-label="Narrated motion graphic: the StartBusiness24 process, explained step by step — your idea, a few questions, your LLC or C-Corp filed, website and logo generated, the Startup Kit and Alice AI office, then launch"></video>
+      <figcaption>27 seconds, with narration guiding each step.</figcaption>
     </figure>
     <div class="xp" id="explorer">
       <div class="xp-btns" role="group" aria-label="Explore the eight steps of the full path">
